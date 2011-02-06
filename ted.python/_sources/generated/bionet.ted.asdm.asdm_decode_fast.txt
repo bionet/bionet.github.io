@@ -1,0 +1,6 @@
+bionet.ted.asdm.asdm_decode_fast
+================================
+
+.. currentmodule:: bionet.ted.asdm
+
+.. autofunction:: asdm_decode_fast

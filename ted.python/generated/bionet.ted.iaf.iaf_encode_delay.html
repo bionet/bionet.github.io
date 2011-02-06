@@ -1,0 +1,196 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.ted.iaf.iaf_encode_delay &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="up" title="Integrate-and-Fire Neuron Routines" href="../reference_iaf.html" />
+    <link rel="next" title="bionet.ted.iaf.iaf_encode_pop" href="bionet.ted.iaf.iaf_encode_pop.html" />
+    <link rel="prev" title="bionet.ted.iaf.iaf_decode_delay" href="bionet.ted.iaf.iaf_decode_delay.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.iaf.iaf_encode_pop.html" title="bionet.ted.iaf.iaf_encode_pop"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_iaf.html" accesskey="U">Integrate-and-Fire Neuron Routines</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-iaf-iaf-encode-delay">
+<h1>bionet.ted.iaf.iaf_encode_delay<a class="headerlink" href="#bionet-ted-iaf-iaf-encode-delay" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.ted.iaf.iaf_encode_delay">
+<tt class="descclassname">bionet.ted.iaf.</tt><tt class="descname">iaf_encode_delay</tt><big>(</big><em>u_list</em>, <em>T</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em>, <em>y_list=None</em>, <em>interval_list=None</em>, <em>u_list_prev=None</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_encode_delay" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-input multi-output delayed IAF time encoding
+machine.</p>
+<p>Encode several signals with an ensemble of ideal
+Integrate-and-Fire neurons with delays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u_list</strong> : list of ndarrays of floats</p>
+<blockquote>
+<div><p>Signals to encode. Each of the ndarrays must be of the same
+length.</p>
+</div></blockquote>
+<p><strong>T</strong> : float</p>
+<blockquote>
+<div><p>Temporal support of signals (in s). The portion of the signal
+encoded is <cite>u_list[:][0:int(T/dt)]</cite>.</p>
+</div></blockquote>
+<p><strong>dt</strong> : float</p>
+<blockquote>
+<div><p>Sampling resolution of input signals; the sampling frequency
+is 1/dt Hz.</p>
+</div></blockquote>
+<p><strong>b_list</strong> : list of floats</p>
+<blockquote>
+<div><p>List of encoder biases.</p>
+</div></blockquote>
+<p><strong>d_list</strong> : list of floats</p>
+<blockquote>
+<div><p>List of encoder thresholds.</p>
+</div></blockquote>
+<p><strong>k_list</strong> : list of floats</p>
+<blockquote>
+<div><p>List of encoder integration constants.</p>
+</div></blockquote>
+<p><strong>a_list</strong> : N x M array_like of floats.</p>
+<blockquote>
+<div><p>Neuron delays (in s).</p>
+</div></blockquote>
+<p><strong>w_list</strong> : N x M array_like of floats.</p>
+<blockquote>
+<div><p>Scaling factors.</p>
+</div></blockquote>
+<p><strong>y_list</strong> : list of floats</p>
+<blockquote>
+<div><p>Initial values of integrators.</p>
+</div></blockquote>
+<p><strong>interval_list</strong> : list of floats</p>
+<blockquote>
+<div><p>Times since last spikes (in s).</p>
+</div></blockquote>
+<p><strong>u_list_prev</strong> : list of ndarrays of floats</p>
+<blockquote>
+<div><p>If nonempty, the contents of this list are prepended to the
+contents of <cite>u_list</cite>.</p>
+</div></blockquote>
+<p><strong>full_output</strong> : bool</p>
+<blockquote>
+<div><p>If set, the function returns the encoded data block followed
+by the given parameters (with updated values for <cite>y</cite> and <cite>interval</cite>).
+This is useful when the function is called repeatedly to
+encode a long signal.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>s_list</strong> : list of ndarrays of floats</p>
+<blockquote>
+<div><p>If <cite>full_output</cite> == False, returns the signals encoded as a list
+of arrays of time intervals between spikes.</p>
+</div></blockquote>
+<p><strong>[s_list, T, dt, b_list, d_list, k_list, a_list, w_list, y_list,</strong> :</p>
+<p><strong>interval_list, u_list_prev, full_output]</strong> : list</p>
+<blockquote class="last">
+<div><p>If <cite>full_output</cite> == True, returns the encoded signals followed
+by updated encoder parameters.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The specified signal length, i.e., <cite>len(u_list[0])*dt</cite>, must
+exceed the support <cite>T</cite> over which the signal is encoded by the
+length of the longest delay.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_encode_delay.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.iaf.iaf_encode_pop.html" title="bionet.ted.iaf.iaf_encode_pop"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_iaf.html" >Integrate-and-Fire Neuron Routines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

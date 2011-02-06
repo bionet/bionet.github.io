@@ -1,0 +1,144 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.ted.bpa.bpa &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="up" title="Routines for Solving Vandermonde Systems" href="../reference_bpa.html" />
+    <link rel="next" title="Authors & Acknowledgments" href="../authors.html" />
+    <link rel="prev" title="bionet.ted.bpa.bpa" href="" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../authors.html" title="Authors & Acknowledgments"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="#" title="bionet.ted.bpa.bpa"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_bpa.html" accesskey="U">Routines for Solving Vandermonde Systems</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-bpa-bpa">
+<h1>bionet.ted.bpa.bpa<a class="headerlink" href="#bionet-ted-bpa-bpa" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.ted.bpa.bpa">
+<tt class="descclassname">bionet.ted.bpa.</tt><tt class="descname">bpa</tt><big>(</big><em>V</em>, <em>b</em><big>)</big><a class="headerlink" href="#bionet.ted.bpa.bpa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Solve a Vandermonde system using BPA.</p>
+<p>Solve a Vandermonde system using the Bjork-Pereyra algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>V</strong> : ndarray of floats, shape (M, M)</p>
+<blockquote>
+<div><p>A Vandermonde matrix.</p>
+</div></blockquote>
+<p><strong>b</strong> : ndarray of floats, shape (M,)</p>
+<blockquote>
+<div><p>The system solved by this routine is <cite>dot(V,d) == b</cite>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>d</strong> : ndarray of floats, shape (M,)</p>
+<blockquote class="last">
+<div><p>System solution.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">numpy.linalg.solve</span></tt></p>
+</div>
+<p class="rubric">Notes</p>
+<p>The matrix is assumed to be oriented such that its second column
+contains the arguments that would need to be passed to the
+<cite>vander()</cite> function in order to construct the matrix.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.bpa.bpa.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../authors.html" title="Authors & Acknowledgments"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="#" title="bionet.ted.bpa.bpa"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_bpa.html" >Routines for Solving Vandermonde Systems</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

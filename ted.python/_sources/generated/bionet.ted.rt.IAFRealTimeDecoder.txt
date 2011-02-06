@@ -1,0 +1,25 @@
+bionet.ted.rt.IAFRealTimeDecoder
+================================
+
+.. currentmodule:: bionet.ted.rt
+
+.. autoclass:: IAFRealTimeDecoder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~IAFRealTimeDecoder.__init__
+      ~IAFRealTimeDecoder.decode
+      ~IAFRealTimeDecoder.process
+      ~IAFRealTimeDecoder.window
+   
+   
+
+   
+   
+   

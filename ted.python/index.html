@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Time Encoding and Decoding Toolbox &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="#" />
+    <link rel="next" title="Installation Instructions" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="install.html" title="Installation Instructions"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">TED v0.061 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="time-encoding-and-decoding-toolbox">
+<h1>Time Encoding and Decoding Toolbox<a class="headerlink" href="#time-encoding-and-decoding-toolbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>The Time Encoding and Decoding Toolbox (TED) is a library of Python
+routines, classes, and demo programs that implement time encoding and
+decoding algorithms. Implementations of the toolbox for other languages such as
+<a class="reference external" href="http://www.mathworks.com/products/matlab/">Matlab</a>
+and NVIDIA&#8217;s <a class="reference external" href="http://www.nvidia.com/cuda/">CUDA</a> are also available
+from the Bionet Group&#8217;s <a class="reference external" href="http://bionet.ee.columbia.edu/code/">code repository page</a>.</p>
+<p>To get started using the toolbox, go to the <a class="reference internal" href="install.html"><em>installation</em></a> page and
+try running the demos. Check out the <a class="reference internal" href="overview.html"><em>overview</em></a> page for a
+high-level introduction to time encoding and decoding concepts.</p>
+</div>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation Instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#obtaining-the-latest-software">Obtaining the Latest Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#building-and-installation">Building and Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview of Time Encoding and Decoding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-is-time-encoding">What is Time Encoding?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-is-time-decoding">What is Time Decoding?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-are-time-encoding-machines">What are Time Encoding Machines?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-are-time-decoding-machines">What are Time Decoding Machines?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#why-should-neuroscientists-care-about-time-encoding">Why Should Neuroscientists Care About Time Encoding?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#why-should-engineers-computer-scientists-care-about-time-encoding">Why Should Engineers/Computer Scientists Care About Time Encoding?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#further-reading">Further Reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="machines.html">Time Encoding and Decoding Machines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="machines_asdm.html">Asynchronous Sigma-Delta Modulator Machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machines_iaf.html">Integrate-and-Fire Neuron Machines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference_asdm.html">Asynchronous Sigma-Delta Modulator Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_iaf.html">Integrate-and-Fire Neuron Routines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_iaf_cuda.html">Integrate-and-Fire Neuron Routines (CUDA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_rt.html">Real-Time Time Encoder and Decoder Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference_bpa.html">Routines for Solving Vandermonde Systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors &amp; Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Change Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-061-november-24-2010">Release 0.061 - (November 24, 2010)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-06-september-17-2010">Release 0.06 - (September 17, 2010)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-051-june-9-2010">Release 0.051 - (June 9, 2010)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-05-june-1-2010">Release 0.05 - (June 1, 2010)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-04-april-19-2010">Release 0.04 - (April 19, 2010)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-03-november-12-2009">Release 0.03 - (November 12, 2009)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-021-october-23-2009">Release 0.021 - (October 23, 2009)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-02-june-26-2009">Release 0.02 - (June 26,2009)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-011-may-08-2009">Release 0.011 - (May 08, 2009)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-01-may-08-2009">Release 0.01 - (May 08, 2009)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="#">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Time Encoding and Decoding Toolbox</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#contents">Contents</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#index">Index</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/index.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="install.html" title="Installation Instructions"
+             >next</a> |</li>
+        <li><a href="#">TED v0.061 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

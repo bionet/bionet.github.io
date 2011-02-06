@@ -1,0 +1,6 @@
+bionet.ted.iaf.iaf_recoverable
+==============================
+
+.. currentmodule:: bionet.ted.iaf
+
+.. autofunction:: iaf_recoverable

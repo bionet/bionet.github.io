@@ -1,0 +1,210 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Overview of Time Encoding and Decoding &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="index.html" />
+    <link rel="next" title="Time Encoding and Decoding Machines" href="machines.html" />
+    <link rel="prev" title="Installation Instructions" href="install.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation Instructions"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="overview-of-time-encoding-and-decoding">
+<h1>Overview of Time Encoding and Decoding<a class="headerlink" href="#overview-of-time-encoding-and-decoding" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-time-encoding">
+<h2>What is Time Encoding?<a class="headerlink" href="#what-is-time-encoding" title="Permalink to this headline">¶</a></h2>
+<p>Consider a simple analog signal:</p>
+<a class="reference internal image-reference" href="_images/overview_input.png"><img alt="_images/overview_input.png" class="align-center" src="_images/overview_input.png" style="width: 512.0px; height: 384.0px;" /></a>
+<p>If this signal is bandlimited, then it can be faithfully represented
+- or <em>encoded</em> - by a sequence of uniformly spaced samples - that is,
+the original analog signal can be <em>perfectly reconstructed</em> from the
+samples. This follows from Shannon&#8217;s Sampling Theorem. There are both
+natural and man-made systems, however, that encode analog input
+information as samples or events that are <em>non-uniformly</em> spaced in
+time. An Integrate-and-Fire neuron, for example, can <em>time encode</em> a
+stimulus signal by transforming it into a sequence of time events or
+<em>spikes</em>: <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/9">[1]</a>:</p>
+<a class="reference internal image-reference" href="_images/tem-iaf.png"><img alt="_images/tem-iaf.png" class="align-center" src="_images/tem-iaf.png" style="width: 476.7px; height: 142.1px;" /></a>
+<p>To illustrate the encoding process, the sample signal depicted above
+(with a bandwidth of 32 Hz and a duration of 100 ms) is
+encoded below using the Integrate-and-Fire neuron as a series of
+non-uniformly spaced spikes (represented by the red markers in
+the plot below):</p>
+<a class="reference internal image-reference" href="_images/overview_encoded.png"><img alt="_images/overview_encoded.png" class="align-center" src="_images/overview_encoded.png" style="width: 512.0px; height: 384.0px;" /></a>
+<p>The existence of such systems motivates the question as to whether
+signals that are encoded in such a manner can be faithfully recovered.</p>
+</div>
+<div class="section" id="what-is-time-decoding">
+<h2>What is Time Decoding?<a class="headerlink" href="#what-is-time-decoding" title="Permalink to this headline">¶</a></h2>
+<p>Under appropriate conditions <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/9">[1]</a>, a signal that has
+been time encoded as a sequence of spikes can be faithfully recovered
+using a <em>time decoding machine</em>. The circuit below uses sinc kernels
+to reconstruct the encoded signal:</p>
+<a class="reference internal image-reference" href="_images/tdm-sinc.png"><img alt="_images/tdm-sinc.png" class="align-center" src="_images/tdm-sinc.png" style="width: 597.1px; height: 72.1px;" /></a>
+<p>Processing a time encoded signal with the above circuit results in the
+following reconstruction. Although the actual input signal is
+discretely represented with traditional computational models, the
+reconstruction can be made arbitrarily precise for bandlimited
+stimuli.</p>
+<a class="reference internal image-reference" href="_images/overview_decoded.png"><img alt="_images/overview_decoded.png" class="align-center" src="_images/overview_decoded.png" style="width: 512.0px; height: 384.0px;" /></a>
+</div>
+<div class="section" id="what-are-time-encoding-machines">
+<h2>What are Time Encoding Machines?<a class="headerlink" href="#what-are-time-encoding-machines" title="Permalink to this headline">¶</a></h2>
+<p>A <em>Time Encoding Machine</em>, or <em>TEM</em> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>, represents
+analog information in the time domain. TEMs arise in single-input
+sigle-output (integrate-and-fire neurons, asynchronous sigma-delta
+modulators), single-input multi-output (population encoding models),
+and other classical circuit configurations:</p>
+<a class="reference internal image-reference" href="_images/tem-general.png"><img alt="_images/tem-general.png" class="align-center" src="_images/tem-general.png" style="width: 660.8px; height: 120.4px;" /></a>
+</div>
+<div class="section" id="what-are-time-decoding-machines">
+<h2>What are Time Decoding Machines?<a class="headerlink" href="#what-are-time-decoding-machines" title="Permalink to this headline">¶</a></h2>
+<p>A <em>Time Decoding Machine</em>, or <em>TDM</em> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>, recovers a
+signal encoded by a Time Encoding Machine according to a fidelity
+criterion:</p>
+<a class="reference internal image-reference" href="_images/tdm-general.png"><img alt="_images/tdm-general.png" class="align-center" src="_images/tdm-general.png" style="width: 660.8px; height: 120.4px;" /></a>
+</div>
+<div class="section" id="why-should-neuroscientists-care-about-time-encoding">
+<h2>Why Should Neuroscientists Care About Time Encoding?<a class="headerlink" href="#why-should-neuroscientists-care-about-time-encoding" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Time Encoding Machines are <em>in silico</em> models of neural encoding.
+Under appropriate conditions, these encoders faithfully represent
+information about stimuli <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>.</li>
+<li>The theory underlying time encoding applies to well-understood
+neuron models such as the (leaky) Integrate-and-Fire neuron
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/10">[3]</a>, the Hodgkin-Huxley neuron, and feedback
+and feedforward configurations of these models <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/12">[6]</a>.</li>
+<li>The theory of time encoding has been extended to address the
+representation of scalar-valued stimuli by populations of neurons
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/27">[8]</a>. In particular,
+the time encoding and decoding of video signals has been
+successfully performed using ensembles of neurons
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/50">[9]</a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/57">[13]</a>.</li>
+</ul>
+</div>
+<div class="section" id="why-should-engineers-computer-scientists-care-about-time-encoding">
+<h2>Why Should Engineers/Computer Scientists Care About Time Encoding?<a class="headerlink" href="#why-should-engineers-computer-scientists-care-about-time-encoding" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Signal representations in the time domain can exploit the increasing
+time resolution that scaling of integrated circuits technology
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a> (Moore&#8217;s law) continues to offer. Traditional
+A/D conversion, by contrast, is adversely affected by the power
+density requirements that call for lower and lower voltages.</li>
+<li>Time encoding theory extends the application domain of
+well-understood concepts in information theory, communications
+theory, signal processing and machine learning to asynchronous
+information representation and computation <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/12">[6]</a>.</li>
+<li>Time encoding theory has been extended to address the
+faithful representation of real-time (arbitrarily long) signals
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/29">[10]</a> and non-bandlimited signals
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/49">[11]</a>.</li>
+</ul>
+</div>
+<div class="section" id="further-reading">
+<h2>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p>More literature on time encoding and decoding is available on the
+<a class="reference external" href="http://bionet.ee.columbia.edu/publications/">Bionet publication server</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Overview of Time Encoding and Decoding</a><ul>
+<li><a class="reference internal" href="#what-is-time-encoding">What is Time Encoding?</a></li>
+<li><a class="reference internal" href="#what-is-time-decoding">What is Time Decoding?</a></li>
+<li><a class="reference internal" href="#what-are-time-encoding-machines">What are Time Encoding Machines?</a></li>
+<li><a class="reference internal" href="#what-are-time-decoding-machines">What are Time Decoding Machines?</a></li>
+<li><a class="reference internal" href="#why-should-neuroscientists-care-about-time-encoding">Why Should Neuroscientists Care About Time Encoding?</a></li>
+<li><a class="reference internal" href="#why-should-engineers-computer-scientists-care-about-time-encoding">Why Should Engineers/Computer Scientists Care About Time Encoding?</a></li>
+<li><a class="reference internal" href="#further-reading">Further Reading</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/overview.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.html" title="Installation Instructions"
+             >previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

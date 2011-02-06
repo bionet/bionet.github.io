@@ -1,0 +1,192 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.ted.iaf_cuda.iaf_encode &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="up" title="Integrate-and-Fire Neuron Routines (CUDA)" href="../reference_iaf_cuda.html" />
+    <link rel="next" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
+    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_decode" href="bionet.ted.iaf_cuda.iaf_decode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_iaf_cuda.html" accesskey="U">Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-iaf-cuda-iaf-encode">
+<h1>bionet.ted.iaf_cuda.iaf_encode<a class="headerlink" href="#bionet-ted-iaf-cuda-iaf-encode" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.ted.iaf_cuda.iaf_encode">
+<tt class="descclassname">bionet.ted.iaf_cuda.</tt><tt class="descname">iaf_encode</tt><big>(</big><em>u</em>, <em>dt</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em>, <em>dte=0.0</em>, <em>y=0.0</em>, <em>interval=0.0</em>, <em>quad_method='trapz'</em>, <em>full_output=False</em>, <em>dev=None</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_encode" title="Permalink to this definition">¶</a></dt>
+<dd><p>IAF time encoding machine.</p>
+<p>Encode a finite length signal with an Integrate-and-Fire neuron.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u</strong> : array_like of floats</p>
+<blockquote>
+<div><p>Signal to encode.</p>
+</div></blockquote>
+<p><strong>dt</strong> : float</p>
+<blockquote>
+<div><p>Sampling resolution of input signal; the sampling frequency
+is 1/dt Hz.</p>
+</div></blockquote>
+<p><strong>b</strong> : float</p>
+<blockquote>
+<div><p>Encoder bias.</p>
+</div></blockquote>
+<p><strong>d</strong> : float</p>
+<blockquote>
+<div><p>Encoder threshold.</p>
+</div></blockquote>
+<p><strong>R</strong> : float</p>
+<blockquote>
+<div><p>Neuron resistance.</p>
+</div></blockquote>
+<p><strong>C</strong> : float</p>
+<blockquote>
+<div><p>Neuron capacitance.</p>
+</div></blockquote>
+<p><strong>dte</strong> : float</p>
+<blockquote>
+<div><p>Sampling resolution assumed by the encoder (s).
+This may not exceed <cite>dt</cite>.</p>
+</div></blockquote>
+<p><strong>y</strong> : float</p>
+<blockquote>
+<div><p>Initial value of integrator.</p>
+</div></blockquote>
+<p><strong>interval</strong> : float</p>
+<blockquote>
+<div><p>Time since last spike (in s).</p>
+</div></blockquote>
+<p><strong>quad_method</strong> : {&#8216;rect&#8217;, &#8216;trapz&#8217;}</p>
+<blockquote>
+<div><p>Quadrature method to use (rectangular or trapezoidal) when the
+neuron is ideal; exponential Euler integration is used
+when the neuron is leaky.</p>
+</div></blockquote>
+<p><strong>full_output</strong> : bool</p>
+<blockquote>
+<div><p>If set, the function returns the encoded data block followed
+by the given parameters (with updated values for <cite>y</cite> and <cite>interval</cite>).
+This is useful when the function is called repeatedly to
+encode a long signal.</p>
+</div></blockquote>
+<p><strong>dev</strong> : pycuda.driver.Device</p>
+<blockquote>
+<div><p>Device object to be used.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>s</strong> : ndarray of floats</p>
+<blockquote>
+<div><p>If <cite>full_output</cite> == False, returns the signal encoded as an
+array of time intervals between spikes.</p>
+</div></blockquote>
+<p><strong>[s, dt, b, d, R, C, dte, y, interval, quad_method, full_output]</strong> : list</p>
+<blockquote class="last">
+<div><p>If <cite>full_output</cite> == True, returns the encoded signal
+followed by updated encoder parameters.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>When trapezoidal integration is used, the value of the integral
+will not be computed for the very last entry in <cite>u</cite>.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.iaf_cuda.iaf_encode.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_iaf_cuda.html" >Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

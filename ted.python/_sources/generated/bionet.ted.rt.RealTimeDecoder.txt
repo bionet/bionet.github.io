@@ -1,0 +1,25 @@
+bionet.ted.rt.RealTimeDecoder
+=============================
+
+.. currentmodule:: bionet.ted.rt
+
+.. autoclass:: RealTimeDecoder
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~RealTimeDecoder.__init__
+      ~RealTimeDecoder.decode
+      ~RealTimeDecoder.process
+      ~RealTimeDecoder.window
+   
+   
+
+   
+   
+   

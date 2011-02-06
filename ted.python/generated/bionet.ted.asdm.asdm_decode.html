@@ -1,0 +1,161 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.ted.asdm.asdm_decode &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="up" title="Asynchronous Sigma-Delta Modulator Routines" href="../reference_asdm.html" />
+    <link rel="next" title="bionet.ted.asdm.asdm_decode_fast" href="bionet.ted.asdm.asdm_decode_fast.html" />
+    <link rel="prev" title="bionet.ted.asdm.asdm_recoverable" href="bionet.ted.asdm.asdm_recoverable.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.asdm.asdm_decode_fast.html" title="bionet.ted.asdm.asdm_decode_fast"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.asdm.asdm_recoverable.html" title="bionet.ted.asdm.asdm_recoverable"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_asdm.html" accesskey="U">Asynchronous Sigma-Delta Modulator Routines</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-asdm-asdm-decode">
+<h1>bionet.ted.asdm.asdm_decode<a class="headerlink" href="#bionet-ted-asdm-asdm-decode" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.ted.asdm.asdm_decode">
+<tt class="descclassname">bionet.ted.asdm.</tt><tt class="descname">asdm_decode</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>k=1.0</em>, <em>sgn=-1</em><big>)</big><a class="headerlink" href="#bionet.ted.asdm.asdm_decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>ASDM time decoding machine.</p>
+<p>Decode a signal encoded with an Asynchronous Sigma-Delta Modulator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s</strong> : ndarray of floats</p>
+<blockquote>
+<div><p>Encoded signal. The values represent the time between spikes (in s).</p>
+</div></blockquote>
+<p><strong>dur</strong> : float</p>
+<blockquote>
+<div><p>Duration of signal (in s).</p>
+</div></blockquote>
+<p><strong>dt</strong> : float</p>
+<blockquote>
+<div><p>Sampling resolution of original signal; the sampling frequency
+is 1/dt Hz.</p>
+</div></blockquote>
+<p><strong>bw</strong> : float</p>
+<blockquote>
+<div><p>Signal bandwidth (in rad/s).</p>
+</div></blockquote>
+<p><strong>b</strong> : float</p>
+<blockquote>
+<div><p>Encoder bias.</p>
+</div></blockquote>
+<p><strong>d</strong> : float</p>
+<blockquote>
+<div><p>Encoder threshold.</p>
+</div></blockquote>
+<p><strong>k</strong> : float</p>
+<blockquote>
+<div><p>Encoder integrator constant.</p>
+</div></blockquote>
+<p><strong>sgn</strong> : {-1, 1}</p>
+<blockquote>
+<div><p>Sign of first spike.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>u_rec</strong> : ndarray of floats</p>
+<blockquote class="last">
+<div><p>Recovered signal.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.asdm.asdm_decode.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.asdm.asdm_decode_fast.html" title="bionet.ted.asdm.asdm_decode_fast"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.asdm.asdm_recoverable.html" title="bionet.ted.asdm.asdm_recoverable"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_asdm.html" >Asynchronous Sigma-Delta Modulator Routines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

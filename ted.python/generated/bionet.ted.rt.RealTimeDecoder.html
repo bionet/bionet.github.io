@@ -1,0 +1,186 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.ted.rt.RealTimeDecoder &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="up" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
+    <link rel="next" title="bionet.ted.rt.RealTimeEncoder" href="bionet.ted.rt.RealTimeEncoder.html" />
+    <link rel="prev" title="bionet.ted.rt.SignalProcessor" href="bionet.ted.rt.SignalProcessor.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.rt.RealTimeEncoder.html" title="bionet.ted.rt.RealTimeEncoder"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.rt.SignalProcessor.html" title="bionet.ted.rt.SignalProcessor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_rt.html" accesskey="U">Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-rt-realtimedecoder">
+<h1>bionet.ted.rt.RealTimeDecoder<a class="headerlink" href="#bionet-ted-rt-realtimedecoder" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="bionet.ted.rt.RealTimeDecoder">
+<em class="property">class </em><tt class="descclassname">bionet.ted.rt.</tt><tt class="descname">RealTimeDecoder</tt><big>(</big><em>dt</em>, <em>bw</em>, <em>N</em>, <em>M</em>, <em>K</em><big>)</big><a class="headerlink" href="#bionet.ted.rt.RealTimeDecoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abstract real-time time decoding machine.</p>
+<p>This class implements a real-time time decoding machine. It
+must be subclassed to use a specific decoding algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>dt</strong> : float</p>
+<blockquote>
+<div><p>Sampling resolution of input signal; the sampling frequency
+is <cite>1/dt</cite> Hz.</p>
+</div></blockquote>
+<p><strong>bw</strong> : float</p>
+<blockquote>
+<div><p>Signal bandwidth (in rad/s).</p>
+</div></blockquote>
+<p><strong>N</strong> : int</p>
+<blockquote>
+<div><p>Number of spikes to process in each block less 1.</p>
+</div></blockquote>
+<p><strong>M</strong> : int</p>
+<blockquote>
+<div><p>Number of spikes between the starting time of each successive
+block.</p>
+</div></blockquote>
+<p><strong>K</strong> : int</p>
+<blockquote class="last">
+<div><p>Number of spikes in the overlap between successive blocks.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="78%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>decode(data, ...)</td>
+<td>Decode a block of data using the additional parameters.</td>
+</tr>
+<tr><td>process(get, put)</td>
+<td>Process data obtained from <cite>get()</cite> and write it using <cite>put()</cite>.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="bionet.ted.rt.RealTimeDecoder.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>dt</em>, <em>bw</em>, <em>N</em>, <em>M</em>, <em>K</em><big>)</big><a class="headerlink" href="#bionet.ted.rt.RealTimeDecoder.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="#bionet.ted.rt.RealTimeDecoder.__init__" title="bionet.ted.rt.RealTimeDecoder.__init__"><tt class="xref py py-obj docutils literal"><span class="pre">__init__</span></tt></a>(dt,&nbsp;bw,&nbsp;N,&nbsp;M,&nbsp;K)</td>
+<td></td>
+</tr>
+<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">decode</span></tt>(*args)</td>
+<td>Decode a block of data.</td>
+</tr>
+<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">process</span></tt>(get,&nbsp;put)</td>
+<td>Decode data returned in blocks by function <cite>get()</cite> and</td>
+</tr>
+<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">window</span></tt>(t,&nbsp;ll,&nbsp;lr,&nbsp;rl,&nbsp;rr)</td>
+<td>Return a window defined over the vector of times t that forms a partition of unity over all time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.rt.RealTimeDecoder.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bionet.ted.rt.RealTimeEncoder.html" title="bionet.ted.rt.RealTimeEncoder"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.ted.rt.SignalProcessor.html" title="bionet.ted.rt.SignalProcessor"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_rt.html" >Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

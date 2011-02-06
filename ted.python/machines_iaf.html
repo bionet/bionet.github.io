@@ -1,0 +1,189 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Integrate-and-Fire Neuron Machines &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="index.html" />
+    <link rel="up" title="Time Encoding and Decoding Machines" href="machines.html" />
+    <link rel="next" title="Reference" href="reference.html" />
+    <link rel="prev" title="Asynchronous Sigma-Delta Modulator Machines" href="machines_asdm.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machines_asdm.html" title="Asynchronous Sigma-Delta Modulator Machines"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="machines.html" accesskey="U">Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="integrate-and-fire-neuron-machines">
+<h1>Integrate-and-Fire Neuron Machines<a class="headerlink" href="#integrate-and-fire-neuron-machines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="single-input-single-output-machines">
+<h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_encode.html#bionet.ted.iaf.iaf_encode" title="bionet.ted.iaf.iaf_encode"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Encoding</span> <span class="pre">Machine</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a></dt>
+<dd><p class="first">Encodes a bandlimited signal using an Integrate-and-Fire neuron.
+Leaky and ideal neuron models are supported.</p>
+<a class="last reference internal image-reference" href="_images/tem-iaf.png"><img alt="_images/tem-iaf.png" class="align-center" src="_images/tem-iaf.png" style="width: 476.7px; height: 142.1px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode.html#bionet.ted.iaf.iaf_decode" title="bionet.ted.iaf.iaf_decode"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/9">[1]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by an Integrate-and-Fire
+neuron using sinc kernels.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc.png"><img alt="_images/tdm-sinc.png" class="align-center" src="_images/tdm-sinc.png" style="width: 597.1px; height: 72.1px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode_fast.html#bionet.ted.iaf.iaf_decode_fast" title="bionet.ted.iaf.iaf_decode_fast"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Fast</span> <span class="pre">Approximation</span> <span class="pre">Method</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/5">[4]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by an Integrate-and-Fire
+neuron using a fast approximation method.</p>
+<a class="last reference internal image-reference" href="_images/tdm-fast.png"><img alt="_images/tdm-fast.png" class="align-center" src="_images/tdm-fast.png" style="width: 597.1px; height: 40.6px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.rt.IAFRealTimeDecoder.html#bionet.ted.rt.IAFRealTimeDecoder" title="bionet.ted.rt.IAFRealTimeDecoder"><tt class="xref py py-class docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Real-Time</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/29">[10]</a></dt>
+<dd><p class="first">Decodes a bandlimited, arbitrarily long signal encoded by an
+Integrate-and-Fire neuron by stitching together blocks of data
+decoded by <tt class="xref py py-func docutils literal"><span class="pre">solving</span> <span class="pre">a</span> <span class="pre">Vandermonde</span> <span class="pre">system</span> <span class="pre">&lt;bionet.ted.iaf.iaf_decode_vander()</span></tt> using the
+<a class="reference internal" href="generated/bionet.ted.bpa.bpa.html#bionet.ted.bpa.bpa" title="bionet.ted.bpa.bpa"><tt class="xref py py-func docutils literal"><span class="pre">Björk-Pereyra</span> <span class="pre">Algorithm</span></tt></a>.</p>
+<a class="last reference internal image-reference" href="_images/tdm-real.png"><img alt="_images/tdm-real.png" class="align-center" src="_images/tdm-real.png" style="width: 888.3px; height: 77.7px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode_spline.html#bionet.ted.iaf.iaf_decode_spline" title="bionet.ted.iaf.iaf_decode_spline"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Spline</span> <span class="pre">Interpolation</span> <span class="pre">Method</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/53">[12]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by an Integrate-and-Fire
+neuron using spline interpolation.</p>
+<a class="last reference internal image-reference" href="_images/tdm-spline.png"><img alt="_images/tdm-spline.png" class="align-center" src="_images/tdm-spline.png" style="width: 678.3px; height: 89.6px;" /></a>
+</dd>
+</dl>
+</div>
+<div class="section" id="single-input-multi-output-machines">
+<h2>Single-Input Multi-Output Machines<a class="headerlink" href="#single-input-multi-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_encode_coupled.html#bionet.ted.iaf.iaf_encode_coupled" title="bionet.ted.iaf.iaf_encode_coupled"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Encoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">SIMO</span> <span class="pre">Coupled</span> <span class="pre">IAF</span> <span class="pre">Encoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/53">[12]</a></dt>
+<dd><p class="first">Encodes a finite energy signal encoded by with multiple coupled
+ON-OFF Integrate-and-Fire neurons.</p>
+<a class="last reference internal image-reference" href="_images/tem-iaf-coupled.png"><img alt="_images/tem-iaf-coupled.png" class="align-center" src="_images/tem-iaf-coupled.png" style="width: 495.6px; height: 357.7px;" /></a>
+</dd>
+</dl>
+</div>
+<div class="section" id="multi-input-single-output-machines">
+<h2>Multi-Input Single-Output Machines<a class="headerlink" href="#multi-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode_pop.html#bionet.ted.iaf.iaf_decode_pop" title="bionet.ted.iaf.iaf_decode_pop"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">MISO</span> <span class="pre">IAF</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by multiple Integrate-and-Fire
+neurons using sinc kernels.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc-miso.png"><img alt="_images/tdm-sinc-miso.png" class="align-center" src="_images/tdm-sinc-miso.png" style="width: 785.4px; height: 361.9px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode_coupled.html#bionet.ted.iaf.iaf_decode_coupled" title="bionet.ted.iaf.iaf_decode_coupled"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">MISO</span> <span class="pre">Coupled</span> <span class="pre">IAF</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/53">[12]</a></dt>
+<dd><p class="first">Decodes a finite energy signal encoded by multiple coupled ON-OFF
+Integrate-and-Fire neurons using spline interpolation.</p>
+<a class="last reference internal image-reference" href="_images/tdm-spline-mimo.png"><img alt="_images/tdm-spline-mimo.png" class="align-center" src="_images/tdm-spline-mimo.png" style="width: 707.7px; height: 89.6px;" /></a>
+</dd>
+</dl>
+</div>
+<div class="section" id="multi-input-multi-output-machines">
+<h2>Multi-Input Multi-Output Machines<a class="headerlink" href="#multi-input-multi-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_encode_delay.html#bionet.ted.iaf.iaf_encode_delay" title="bionet.ted.iaf.iaf_encode_delay"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Encoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">MIMO</span> <span class="pre">Delayed</span> <span class="pre">IAF</span> <span class="pre">Encoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/53">[12]</a></dt>
+<dd><p class="first">Encodes several finite energy signals encoded by multiple
+Integrate-and-Fire neurons with delays.</p>
+<a class="last reference internal image-reference" href="_images/tem-iaf-mimo.png"><img alt="_images/tem-iaf-mimo.png" class="align-center" src="_images/tem-iaf-mimo.png" style="width: 729.4px; height: 550.2px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.iaf.iaf_decode_delay.html#bionet.ted.iaf.iaf_decode_delay" title="bionet.ted.iaf.iaf_decode_delay"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">MIMO</span> <span class="pre">Delayed</span> <span class="pre">IAF</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/53">[12]</a></dt>
+<dd><p class="first">Reconstructs several finite energy signals encoded by multiple
+Integrate-and-Fire neurons with delays using spline
+interpolation.</p>
+<a class="last reference internal image-reference" href="_images/tdm-spline-mimo.png"><img alt="_images/tdm-spline-mimo.png" class="align-center" src="_images/tdm-spline-mimo.png" style="width: 707.7px; height: 89.6px;" /></a>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Integrate-and-Fire Neuron Machines</a><ul>
+<li><a class="reference internal" href="#single-input-single-output-machines">Single-Input Single-Output Machines</a></li>
+<li><a class="reference internal" href="#single-input-multi-output-machines">Single-Input Multi-Output Machines</a></li>
+<li><a class="reference internal" href="#multi-input-single-output-machines">Multi-Input Single-Output Machines</a></li>
+<li><a class="reference internal" href="#multi-input-multi-output-machines">Multi-Input Multi-Output Machines</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/machines_iaf.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machines_asdm.html" title="Asynchronous Sigma-Delta Modulator Machines"
+             >previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="machines.html" >Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

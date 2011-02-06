@@ -1,0 +1,178 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Real-Time Time Encoder and Decoder Classes &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="bionet.ted.rt.SignalProcessor" href="generated/bionet.ted.rt.SignalProcessor.html" />
+    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_encode" href="generated/bionet.ted.iaf_cuda.iaf_encode.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="generated/bionet.ted.rt.SignalProcessor.html" title="bionet.ted.rt.SignalProcessor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="generated/bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="real-time-time-encoder-and-decoder-classes">
+<h1>Real-Time Time Encoder and Decoder Classes<a class="headerlink" href="#real-time-time-encoder-and-decoder-classes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abstract-classes">
+<h2>Abstract Classes<a class="headerlink" href="#abstract-classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.SignalProcessor.html#bionet.ted.rt.SignalProcessor" title="bionet.ted.rt.SignalProcessor"><tt class="xref py py-obj docutils literal"><span class="pre">SignalProcessor</span></tt></a></td>
+<td>Abstract signal processor.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.RealTimeDecoder.html#bionet.ted.rt.RealTimeDecoder" title="bionet.ted.rt.RealTimeDecoder"><tt class="xref py py-obj docutils literal"><span class="pre">RealTimeDecoder</span></tt></a></td>
+<td>Abstract real-time time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.RealTimeEncoder.html#bionet.ted.rt.RealTimeEncoder" title="bionet.ted.rt.RealTimeEncoder"><tt class="xref py py-obj docutils literal"><span class="pre">RealTimeEncoder</span></tt></a></td>
+<td>Abstract real-time time encoding machine.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="asynchronous-sigma-delta-modulator-classes">
+<h2>Asynchronous Sigma-Delta Modulator Classes<a class="headerlink" href="#asynchronous-sigma-delta-modulator-classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.ASDMRealTimeDecoder.html#bionet.ted.rt.ASDMRealTimeDecoder" title="bionet.ted.rt.ASDMRealTimeDecoder"><tt class="xref py py-obj docutils literal"><span class="pre">ASDMRealTimeDecoder</span></tt></a></td>
+<td>Real-time ASDM time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.ASDMRealTimeDecoderIns.html#bionet.ted.rt.ASDMRealTimeDecoderIns" title="bionet.ted.rt.ASDMRealTimeDecoderIns"><tt class="xref py py-obj docutils literal"><span class="pre">ASDMRealTimeDecoderIns</span></tt></a></td>
+<td>Real-time threshold-insensitive ASDM time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.ASDMRealTimeEncoder.html#bionet.ted.rt.ASDMRealTimeEncoder" title="bionet.ted.rt.ASDMRealTimeEncoder"><tt class="xref py py-obj docutils literal"><span class="pre">ASDMRealTimeEncoder</span></tt></a></td>
+<td>Real-time ASDM time encoding machine.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="integrate-and-fire-neuron-classes">
+<h2>Integrate-and-Fire Neuron Classes<a class="headerlink" href="#integrate-and-fire-neuron-classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.IAFRealTimeDecoder.html#bionet.ted.rt.IAFRealTimeDecoder" title="bionet.ted.rt.IAFRealTimeDecoder"><tt class="xref py py-obj docutils literal"><span class="pre">IAFRealTimeDecoder</span></tt></a></td>
+<td>Real-time IAF neuron time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.rt.IAFRealTimeEncoder.html#bionet.ted.rt.IAFRealTimeEncoder" title="bionet.ted.rt.IAFRealTimeEncoder"><tt class="xref py py-obj docutils literal"><span class="pre">IAFRealTimeEncoder</span></tt></a></td>
+<td>Real-time IAF neuron time encoding machine.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Real-Time Time Encoder and Decoder Classes</a><ul>
+<li><a class="reference internal" href="#abstract-classes">Abstract Classes</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#asynchronous-sigma-delta-modulator-classes">Asynchronous Sigma-Delta Modulator Classes</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#integrate-and-fire-neuron-classes">Integrate-and-Fire Neuron Classes</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/reference_rt.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="generated/bionet.ted.rt.SignalProcessor.html" title="bionet.ted.rt.SignalProcessor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="generated/bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
+             >previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

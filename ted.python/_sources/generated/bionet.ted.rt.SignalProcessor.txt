@@ -1,0 +1,23 @@
+bionet.ted.rt.SignalProcessor
+=============================
+
+.. currentmodule:: bionet.ted.rt
+
+.. autoclass:: SignalProcessor
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~SignalProcessor.__init__
+      ~SignalProcessor.process
+   
+   
+
+   
+   
+   

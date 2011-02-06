@@ -1,0 +1,174 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Asynchronous Sigma-Delta Modulator Machines &mdash; TED v0.061 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.061',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED v0.061 documentation" href="index.html" />
+    <link rel="up" title="Time Encoding and Decoding Machines" href="machines.html" />
+    <link rel="next" title="Integrate-and-Fire Neuron Machines" href="machines_iaf.html" />
+    <link rel="prev" title="Time Encoding and Decoding Machines" href="machines.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="machines_iaf.html" title="Integrate-and-Fire Neuron Machines"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="machines.html" accesskey="U">Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="asynchronous-sigma-delta-modulator-machines">
+<h1>Asynchronous Sigma-Delta Modulator Machines<a class="headerlink" href="#asynchronous-sigma-delta-modulator-machines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="single-input-single-output-machines">
+<h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_encode.html#bionet.ted.asdm.asdm_encode" title="bionet.ted.asdm.asdm_encode"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Encoding</span> <span class="pre">Machine</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a></dt>
+<dd><p class="first">Encodes a bandlimited signal using an Asynchronous Sigma-Delta
+Modulator.</p>
+<a class="last reference internal image-reference" href="_images/tem-asdm.png"><img alt="_images/tem-asdm.png" class="align-center" src="_images/tem-asdm.png" style="width: 519.4px; height: 145.6px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode.html#bionet.ted.asdm.asdm_decode" title="bionet.ted.asdm.asdm_decode"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a></dt>
+<dd><p class="first">Reconstructs a bandlimited signal encoded with an Asynchronous Sigma-Delta
+Modulator using sinc kernels.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc.png"><img alt="_images/tdm-sinc.png" class="align-center" src="_images/tdm-sinc.png" style="width: 597.1px; height: 72.1px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_fast.html#bionet.ted.asdm.asdm_decode_fast" title="bionet.ted.asdm.asdm_decode_fast"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Fast</span> <span class="pre">Approximation</span> <span class="pre">Method</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/5">[4]</a></dt>
+<dd><p class="first">Reconstructs a bandlimited signal encoded with an Asynchronous Sigma-Delta
+Modulator using a fast approximation method.</p>
+<a class="last reference internal image-reference" href="_images/tdm-fast.png"><img alt="_images/tdm-fast.png" class="align-center" src="_images/tdm-fast.png" style="width: 597.1px; height: 40.6px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.rt.ASDMRealTimeDecoder.html#bionet.ted.rt.ASDMRealTimeDecoder" title="bionet.ted.rt.ASDMRealTimeDecoder"><tt class="xref py py-class docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Real-Time</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/29">[10]</a></dt>
+<dd><p class="first">Decodes a bandlimited, arbitrarily long signal encoded by an
+Asynchronous Sigma-Delta Modulator by stitching together blocks of data
+decoded by <a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_vander.html#bionet.ted.asdm.asdm_decode_vander" title="bionet.ted.asdm.asdm_decode_vander"><tt class="xref py py-func docutils literal"><span class="pre">solving</span> <span class="pre">a</span> <span class="pre">Vandermonde</span> <span class="pre">system</span></tt></a> using the
+<a class="reference internal" href="generated/bionet.ted.bpa.bpa.html#bionet.ted.bpa.bpa" title="bionet.ted.bpa.bpa"><tt class="xref py py-func docutils literal"><span class="pre">Björk-Pereyra</span> <span class="pre">Algorithm</span></tt></a>.</p>
+<a class="last reference internal image-reference" href="_images/tdm-real.png"><img alt="_images/tdm-real.png" class="align-center" src="_images/tdm-real.png" style="width: 888.3px; height: 77.7px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.rt.ASDMRealTimeDecoder.html#bionet.ted.rt.ASDMRealTimeDecoder" title="bionet.ted.rt.ASDMRealTimeDecoder"><tt class="xref py py-class docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Threshold-Insensitive</span> <span class="pre">Real-Time</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/29">[10]</a></dt>
+<dd><p class="first">Decodes a bandlimited, arbitrarily long signal encoded by an
+Asynchronous Sigma-Delta Modulator by stitching together blocks of data
+decoded by <a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_vander_ins.html#bionet.ted.asdm.asdm_decode_vander_ins" title="bionet.ted.asdm.asdm_decode_vander_ins"><tt class="xref py py-func docutils literal"><span class="pre">solving</span> <span class="pre">a</span> <span class="pre">Vandermonde</span> <span class="pre">system</span></tt></a> using the
+<a class="reference internal" href="generated/bionet.ted.bpa.bpa.html#bionet.ted.bpa.bpa" title="bionet.ted.bpa.bpa"><tt class="xref py py-func docutils literal"><span class="pre">Björk-Pereyra</span> <span class="pre">Algorithm</span></tt></a>. This
+reconstruction method does not require the specification of an
+integrator threshold.</p>
+<a class="last reference internal image-reference" href="_images/tdm-real-ins.png"><img alt="_images/tdm-real-ins.png" class="align-center" src="_images/tdm-real-ins.png" style="width: 987.7px; height: 102.9px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_ins.html#bionet.ted.asdm.asdm_decode_ins" title="bionet.ted.asdm.asdm_decode_ins"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Threshold-Insensitive</span> <span class="pre">Method</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a></dt>
+<dd><p class="first">Reconstructs a bandlimited signal encoded with an Asynchronous
+Sigma-Delta Modulator using sinc kernels. This reconstruction
+method does not require the specification of an integrator
+threshold.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc-ins.png"><img alt="_images/tdm-sinc-ins.png" class="align-center" src="_images/tdm-sinc-ins.png" style="width: 707.7px; height: 72.1px;" /></a>
+</dd>
+</dl>
+</div>
+<div class="section" id="multi-input-single-output-machines">
+<h2>Multi-Input Single-Output Machines<a class="headerlink" href="#multi-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_pop.html#bionet.ted.asdm.asdm_decode_pop" title="bionet.ted.asdm.asdm_decode_pop"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">MISO</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by multiple Asynchronous
+Sigma-Delta Modulators using sinc kernels.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc-miso.png"><img alt="_images/tdm-sinc-miso.png" class="align-center" src="_images/tdm-sinc-miso.png" style="width: 785.4px; height: 361.9px;" /></a>
+</dd>
+<dt><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_pop.html#bionet.ted.asdm.asdm_decode_pop" title="bionet.ted.asdm.asdm_decode_pop"><tt class="xref py py-func docutils literal"><span class="pre">Time</span> <span class="pre">Decoding</span> <span class="pre">Machine</span> <span class="pre">-</span> <span class="pre">Threshold-Insensitive</span> <span class="pre">MISO</span> <span class="pre">Decoder</span></tt></a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a></dt>
+<dd><p class="first">Decodes a bandlimited signal encoded by multiple Asynchronous
+Sigma-Delta Modulators using sinc kernels. This reconstruction
+method does not require the specification of an integrator
+thresholds.</p>
+<a class="last reference internal image-reference" href="_images/tdm-sinc-ins-miso.png"><img alt="_images/tdm-sinc-ins-miso.png" class="align-center" src="_images/tdm-sinc-ins-miso.png" style="width: 888.3px; height: 361.9px;" /></a>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Asynchronous Sigma-Delta Modulator Machines</a><ul>
+<li><a class="reference internal" href="#single-input-single-output-machines">Single-Input Single-Output Machines</a></li>
+<li><a class="reference internal" href="#multi-input-single-output-machines">Multi-Input Single-Output Machines</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/machines_asdm.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="machines_iaf.html" title="Integrate-and-Fire Neuron Machines"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             >previous</a> |</li>
+        <li><a href="index.html">TED v0.061 documentation</a> &raquo;</li>
+          <li><a href="machines.html" >Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2010, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

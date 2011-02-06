@@ -1,0 +1,6 @@
+bionet.ted.iaf.iaf_decode_pop
+=============================
+
+.. currentmodule:: bionet.ted.iaf
+
+.. autofunction:: iaf_decode_pop
