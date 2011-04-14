@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf_cuda.iaf_decode &mdash; TED v0.061 documentation</title>
+    <title>bionet.ted.iaf_cuda.iaf_decode &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.061',
+        VERSION:     '0.062',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
     <link rel="up" title="Integrate-and-Fire Neuron Routines (CUDA)" href="../reference_iaf_cuda.html" />
     <link rel="next" title="bionet.ted.iaf_cuda.iaf_encode" href="bionet.ted.iaf_cuda.iaf_encode.html" />
     <link rel="prev" title="bionet.ted.iaf_cuda.iaf_encode" href="bionet.ted.iaf_cuda.iaf_encode.html" /> 
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf_cuda.html" accesskey="U">Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
       </ul>
@@ -54,7 +54,7 @@
 <h1>bionet.ted.iaf_cuda.iaf_decode<a class="headerlink" href="#bionet-ted-iaf-cuda-iaf-decode" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="bionet.ted.iaf_cuda.iaf_decode">
-<tt class="descclassname">bionet.ted.iaf_cuda.</tt><tt class="descname">iaf_decode</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em>, <em>dev=None</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_decode" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">bionet.ted.iaf_cuda.</tt><tt class="descname">iaf_decode</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_decode" title="Permalink to this definition">¶</a></dt>
 <dd><p>IAF time decoding machine.</p>
 <p>Decode a finite length signal encoded with an Integrate-and-Fire
 neuron.</p>
@@ -94,10 +94,6 @@ is 1/dt Hz.</p>
 <p><strong>C</strong> : float</p>
 <blockquote>
 <div><p>Neuron capacitance.</p>
-</div></blockquote>
-<p><strong>dev</strong> : pycuda.driver.Device</p>
-<blockquote>
-<div><p>Device object to be used.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -153,7 +149,7 @@ is 1/dt Hz.</p>
         <li class="right" >
           <a href="bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf_cuda.html" >Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
       </ul>

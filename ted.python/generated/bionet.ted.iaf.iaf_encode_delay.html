@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf.iaf_encode_delay &mdash; TED v0.061 documentation</title>
+    <title>bionet.ted.iaf.iaf_encode_delay &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.061',
+        VERSION:     '0.062',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.061 documentation" href="../index.html" />
+    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
     <link rel="up" title="Integrate-and-Fire Neuron Routines" href="../reference_iaf.html" />
     <link rel="next" title="bionet.ted.iaf.iaf_encode_pop" href="bionet.ted.iaf.iaf_encode_pop.html" />
     <link rel="prev" title="bionet.ted.iaf.iaf_decode_delay" href="bionet.ted.iaf.iaf_decode_delay.html" /> 
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf.html" accesskey="U">Integrate-and-Fire Neuron Routines</a> &raquo;</li> 
       </ul>
@@ -54,7 +54,7 @@
 <h1>bionet.ted.iaf.iaf_encode_delay<a class="headerlink" href="#bionet-ted-iaf-iaf-encode-delay" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="bionet.ted.iaf.iaf_encode_delay">
-<tt class="descclassname">bionet.ted.iaf.</tt><tt class="descname">iaf_encode_delay</tt><big>(</big><em>u_list</em>, <em>T</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em>, <em>y_list=None</em>, <em>interval_list=None</em>, <em>u_list_prev=None</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_encode_delay" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">bionet.ted.iaf.</tt><tt class="descname">iaf_encode_delay</tt><big>(</big><em>u_list</em>, <em>t_start</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em>, <em>y_list=None</em>, <em>interval_list=None</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_encode_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multi-input multi-output delayed IAF time encoding
 machine.</p>
 <p>Encode several signals with an ensemble of ideal
@@ -68,10 +68,9 @@ Integrate-and-Fire neurons with delays.</p>
 <div><p>Signals to encode. Each of the ndarrays must be of the same
 length.</p>
 </div></blockquote>
-<p><strong>T</strong> : float</p>
+<p><strong>t_start</strong> : float</p>
 <blockquote>
-<div><p>Temporal support of signals (in s). The portion of the signal
-encoded is <cite>u_list[:][0:int(T/dt)]</cite>.</p>
+<div><p>Time at which to begin encoding (in s).</p>
 </div></blockquote>
 <p><strong>dt</strong> : float</p>
 <blockquote>
@@ -106,11 +105,6 @@ is 1/dt Hz.</p>
 <blockquote>
 <div><p>Times since last spikes (in s).</p>
 </div></blockquote>
-<p><strong>u_list_prev</strong> : list of ndarrays of floats</p>
-<blockquote>
-<div><p>If nonempty, the contents of this list are prepended to the
-contents of <cite>u_list</cite>.</p>
-</div></blockquote>
 <p><strong>full_output</strong> : bool</p>
 <blockquote>
 <div><p>If set, the function returns the encoded data block followed
@@ -125,7 +119,7 @@ encode a long signal.</p>
 <div><p>If <cite>full_output</cite> == False, returns the signals encoded as a list
 of arrays of time intervals between spikes.</p>
 </div></blockquote>
-<p><strong>[s_list, T, dt, b_list, d_list, k_list, a_list, w_list, y_list,</strong> :</p>
+<p><strong>[s_list, t_start, dt, b_list, d_list, k_list, a_list, w_list, y_list,</strong> :</p>
 <p><strong>interval_list, u_list_prev, full_output]</strong> : list</p>
 <blockquote class="last">
 <div><p>If <cite>full_output</cite> == True, returns the encoded signals followed
@@ -136,9 +130,7 @@ by updated encoder parameters.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>The specified signal length, i.e., <cite>len(u_list[0])*dt</cite>, must
-exceed the support <cite>T</cite> over which the signal is encoded by the
-length of the longest delay.</p>
+<p><cite>t_start</cite> must exceed <cite>max(a)</cite>.</p>
 </dd></dl>
 
 </div>
@@ -183,7 +175,7 @@ length of the longest delay.</p>
         <li class="right" >
           <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.061 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf.html" >Integrate-and-Fire Neuron Routines</a> &raquo;</li> 
       </ul>
