@@ -22,9 +22,9 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="../index.html" />
-    <link rel="up" title="Integrate-and-Fire Neuron Routines (CUDA)" href="../reference_iaf_cuda.html" />
-    <link rel="next" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
-    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_decode" href="bionet.ted.iaf_cuda.iaf_decode.html" /> 
+    <link rel="up" title="Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)" href="../reference_iaf_sinc_cuda.html" />
+    <link rel="next" title="bionet.ted.iaf_cuda.iaf_encode_pop" href="bionet.ted.iaf_cuda.iaf_encode_pop.html" />
+    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_decode_pop" href="bionet.ted.iaf_cuda.iaf_decode_pop.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,14 +34,14 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
+          <a href="bionet.ted.iaf_cuda.iaf_encode_pop.html" title="bionet.ted.iaf_cuda.iaf_encode_pop"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
+          <a href="bionet.ted.iaf_cuda.iaf_decode_pop.html" title="bionet.ted.iaf_cuda.iaf_decode_pop"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_cuda.html" accesskey="U">Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_sinc_cuda.html" accesskey="U">Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -52,9 +52,9 @@
             
   <div class="section" id="bionet-ted-iaf-cuda-iaf-encode">
 <h1>bionet.ted.iaf_cuda.iaf_encode<a class="headerlink" href="#bionet-ted-iaf-cuda-iaf-encode" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="staticmethod">
 <dt id="bionet.ted.iaf_cuda.iaf_encode">
-<tt class="descclassname">bionet.ted.iaf_cuda.</tt><tt class="descname">iaf_encode</tt><big>(</big><em>u</em>, <em>dt</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em>, <em>dte=0.0</em>, <em>y=0.0</em>, <em>interval=0.0</em>, <em>quad_method='trapz'</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_encode" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><tt class="descclassname">iaf_cuda.</tt><tt class="descname">iaf_encode</tt><big>(</big><em>u</em>, <em>dt</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em>, <em>dte=0.0</em>, <em>y=0.0</em>, <em>interval=0.0</em>, <em>quad_method='trapz'</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_encode" title="Permalink to this definition">¶</a></dt>
 <dd><p>IAF time encoding machine.</p>
 <p>Encode a finite length signal with an Integrate-and-Fire neuron.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -170,18 +170,18 @@ will not be computed for the very last entry in <cite>u</cite>.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
+          <a href="bionet.ted.iaf_cuda.iaf_encode_pop.html" title="bionet.ted.iaf_cuda.iaf_encode_pop"
              >next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
+          <a href="bionet.ted.iaf_cuda.iaf_decode_pop.html" title="bionet.ted.iaf_cuda.iaf_decode_pop"
              >previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_cuda.html" >Integrate-and-Fire Neuron Routines (CUDA)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_sinc_cuda.html" >Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-      &copy; Copyright 2009-2010, Lev Givon.
+      &copy; Copyright 2009-2011, Lev Givon.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
     </div>
   </body>

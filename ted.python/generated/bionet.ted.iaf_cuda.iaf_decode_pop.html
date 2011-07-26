@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf.iaf_decode_fast &mdash; TED v0.062 documentation</title>
+    <title>bionet.ted.iaf_cuda.iaf_decode_pop &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,9 +22,9 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="../index.html" />
-    <link rel="up" title="Integrate-and-Fire Neuron Routines (Sinc Kernel)" href="../reference_iaf_sinc.html" />
-    <link rel="next" title="bionet.ted.iaf.iaf_decode_spline" href="bionet.ted.iaf.iaf_decode_spline.html" />
-    <link rel="prev" title="bionet.ted.iaf.iaf_decode" href="bionet.ted.iaf.iaf_decode.html" /> 
+    <link rel="up" title="Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)" href="../reference_iaf_trig_cuda.html" />
+    <link rel="next" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
+    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_decode" href="bionet.ted.iaf_cuda.iaf_decode.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,14 +34,14 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_spline.html" title="bionet.ted.iaf.iaf_decode_spline"
+          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode.html" title="bionet.ted.iaf.iaf_decode"
+          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" accesskey="U">Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_trig_cuda.html" accesskey="U">Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,21 +50,29 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="bionet-ted-iaf-iaf-decode-fast">
-<h1>bionet.ted.iaf.iaf_decode_fast<a class="headerlink" href="#bionet-ted-iaf-iaf-decode-fast" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bionet-ted-iaf-cuda-iaf-decode-pop">
+<h1>bionet.ted.iaf_cuda.iaf_decode_pop<a class="headerlink" href="#bionet-ted-iaf-cuda-iaf-decode-pop" title="Permalink to this headline">¶</a></h1>
 <dl class="staticmethod">
-<dt id="bionet.ted.iaf.iaf_decode_fast">
-<em class="property">static </em><tt class="descclassname">iaf.</tt><tt class="descname">iaf_decode_fast</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>M</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_decode_fast" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast IAF time decoding machine.</p>
-<p>Decode a signal encoded with an Integrate-and-Fire neuron using a
-fast recovery algorithm.</p>
+<dt id="bionet.ted.iaf_cuda.iaf_decode_pop">
+<em class="property">static </em><tt class="descclassname">iaf_cuda.</tt><tt class="descname">iaf_decode_pop</tt><big>(</big><em>s_gpu</em>, <em>ns_gpu</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>b_gpu</em>, <em>d_gpu</em>, <em>R_gpu</em>, <em>C_gpu</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_decode_pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multiple-input single-output IAF time decoding machine.</p>
+<p>Decode a signal encoded with an ensemble of Integrate-and-Fire
+neurons assuming that the encoded signal is representable in terms
+of sinc kernels.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s</strong> : array_like of floats</p>
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Encoded signal. The values represent the time between spikes (in s).</p>
+<div><p>Signal encoded by an ensemble of encoders. The nonzero
+values represent the time between spikes (in s). The number of
+arrays in the list corresponds to the number of encoders in
+the ensemble.</p>
+</div></blockquote>
+<p><strong>ns_gpu</strong> : pycuda.gpuarray.GPUArray</p>
+<blockquote>
+<div><p>Number of interspike intervals in each row of <cite>s_gpu</cite>.</p>
 </div></blockquote>
 <p><strong>dur</strong> : float</p>
 <blockquote>
@@ -79,29 +87,25 @@ is 1/dt Hz.</p>
 <blockquote>
 <div><p>Signal bandwidth (in rad/s).</p>
 </div></blockquote>
-<p><strong>M</strong> : int</p>
+<p><strong>b_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Number of bins used by the fast algorithm.</p>
+<div><p>Array of encoder biases.</p>
 </div></blockquote>
-<p><strong>b</strong> : float</p>
+<p><strong>d_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Encoder bias.</p>
+<div><p>Array of encoder thresholds.</p>
 </div></blockquote>
-<p><strong>d</strong> : float</p>
+<p><strong>R_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Encoder threshold.</p>
+<div><p>Array of neuron resistances.</p>
 </div></blockquote>
-<p><strong>R</strong> : float</p>
+<p><strong>C_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Neuron resistance.</p>
-</div></blockquote>
-<p><strong>C</strong> : float</p>
-<blockquote>
-<div><p>Neuron capacitance.</p>
+<div><p>Array of neuron capacitances.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>u_rec</strong> : ndarray of floats</p>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>u_rec</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote class="last">
 <div><p>Recovered signal.</p>
 </div></blockquote>
@@ -109,6 +113,9 @@ is 1/dt Hz.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Notes</p>
+<p>The number of spikes contributed by each neuron may differ from the
+number contributed by other neurons.</p>
 </dd></dl>
 
 </div>
@@ -121,7 +128,7 @@ is 1/dt Hz.</p>
         <div class="sphinxsidebarwrapper">
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_decode_fast.txt"
+              <li><a href="../_sources/generated/bionet.ted.iaf_cuda.iaf_decode_pop.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -148,14 +155,14 @@ is 1/dt Hz.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_spline.html" title="bionet.ted.iaf.iaf_decode_spline"
+          <a href="../reference_rt.html" title="Real-Time Time Encoder and Decoder Classes"
              >next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode.html" title="bionet.ted.iaf.iaf_decode"
+          <a href="bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
              >previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" >Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_trig_cuda.html" >Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

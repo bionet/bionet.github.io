@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf.iaf_decode_fast &mdash; TED v0.062 documentation</title>
+    <title>bionet.ted.iaf_trig.iaf_decode &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,9 +22,9 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="../index.html" />
-    <link rel="up" title="Integrate-and-Fire Neuron Routines (Sinc Kernel)" href="../reference_iaf_sinc.html" />
-    <link rel="next" title="bionet.ted.iaf.iaf_decode_spline" href="bionet.ted.iaf.iaf_decode_spline.html" />
-    <link rel="prev" title="bionet.ted.iaf.iaf_decode" href="bionet.ted.iaf.iaf_decode.html" /> 
+    <link rel="up" title="Integrate-and-Fire Neuron Routines (Dirichlet Kernel)" href="../reference_iaf_trig.html" />
+    <link rel="next" title="bionet.ted.iaf_trig.iaf_decode_pop" href="bionet.ted.iaf_trig.iaf_decode_pop.html" />
+    <link rel="prev" title="bionet.ted.iaf_trig.iaf_decode_pop" href="bionet.ted.iaf_trig.iaf_decode_pop.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,14 +34,14 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_spline.html" title="bionet.ted.iaf.iaf_decode_spline"
+          <a href="bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode.html" title="bionet.ted.iaf.iaf_decode"
+          <a href="bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" accesskey="U">Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_trig.html" accesskey="U">Integrate-and-Fire Neuron Routines (Dirichlet Kernel)</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,19 +50,20 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="bionet-ted-iaf-iaf-decode-fast">
-<h1>bionet.ted.iaf.iaf_decode_fast<a class="headerlink" href="#bionet-ted-iaf-iaf-decode-fast" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bionet-ted-iaf-trig-iaf-decode">
+<h1>bionet.ted.iaf_trig.iaf_decode<a class="headerlink" href="#bionet-ted-iaf-trig-iaf-decode" title="Permalink to this headline">¶</a></h1>
 <dl class="staticmethod">
-<dt id="bionet.ted.iaf.iaf_decode_fast">
-<em class="property">static </em><tt class="descclassname">iaf.</tt><tt class="descname">iaf_decode_fast</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>M</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_decode_fast" title="Permalink to this definition">¶</a></dt>
-<dd><p>Fast IAF time decoding machine.</p>
-<p>Decode a signal encoded with an Integrate-and-Fire neuron using a
-fast recovery algorithm.</p>
+<dt id="bionet.ted.iaf_trig.iaf_decode">
+<em class="property">static </em><tt class="descclassname">iaf_trig.</tt><tt class="descname">iaf_decode</tt><big>(</big><em>s</em>, <em>dur</em>, <em>dt</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>R=inf</em>, <em>C=1.0</em>, <em>M=5</em>, <em>smoothing=0.0</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_trig.iaf_decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>IAF time decoding machine using trigonometric polynomials.</p>
+<p>Decode a finite length signal encoded with an Integrate-and-Fire
+neuron assuming that the encoded signal is representable in terms
+of trigonometric polynomials.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s</strong> : array_like of floats</p>
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s</strong> : ndarray of floats</p>
 <blockquote>
 <div><p>Encoded signal. The values represent the time between spikes (in s).</p>
 </div></blockquote>
@@ -79,10 +80,6 @@ is 1/dt Hz.</p>
 <blockquote>
 <div><p>Signal bandwidth (in rad/s).</p>
 </div></blockquote>
-<p><strong>M</strong> : int</p>
-<blockquote>
-<div><p>Number of bins used by the fast algorithm.</p>
-</div></blockquote>
 <p><strong>b</strong> : float</p>
 <blockquote>
 <div><p>Encoder bias.</p>
@@ -98,6 +95,14 @@ is 1/dt Hz.</p>
 <p><strong>C</strong> : float</p>
 <blockquote>
 <div><p>Neuron capacitance.</p>
+</div></blockquote>
+<p><strong>M</strong> : int</p>
+<blockquote>
+<div><p>2*M+1 coefficients are used for reconstructing the signal.</p>
+</div></blockquote>
+<p><strong>smoothing</strong> : float</p>
+<blockquote>
+<div><p>Smoothing parameter.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -121,7 +126,7 @@ is 1/dt Hz.</p>
         <div class="sphinxsidebarwrapper">
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_decode_fast.txt"
+              <li><a href="../_sources/generated/bionet.ted.iaf_trig.iaf_decode.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -148,14 +153,14 @@ is 1/dt Hz.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_spline.html" title="bionet.ted.iaf.iaf_decode_spline"
+          <a href="bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              >next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode.html" title="bionet.ted.iaf.iaf_decode"
+          <a href="bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              >previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" >Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_trig.html" >Integrate-and-Fire Neuron Routines (Dirichlet Kernel)</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

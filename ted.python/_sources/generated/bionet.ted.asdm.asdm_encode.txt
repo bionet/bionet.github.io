@@ -1,6 +1,6 @@
 bionet.ted.asdm.asdm_encode
 ===========================
 
-.. currentmodule:: bionet.ted.asdm
+.. currentmodule:: bionet.ted
 
-.. autofunction:: asdm_encode
+.. automethod:: asdm.asdm_encode

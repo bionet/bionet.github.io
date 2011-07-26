@@ -1,6 +1,6 @@
 bionet.ted.asdm.asdm_decode_pop
 ===============================
 
-.. currentmodule:: bionet.ted.asdm
+.. currentmodule:: bionet.ted
 
-.. autofunction:: asdm_decode_pop
+.. automethod:: asdm.asdm_decode_pop

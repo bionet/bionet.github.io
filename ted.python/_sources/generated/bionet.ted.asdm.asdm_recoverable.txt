@@ -1,6 +1,6 @@
 bionet.ted.asdm.asdm_recoverable
 ================================
 
-.. currentmodule:: bionet.ted.asdm
+.. currentmodule:: bionet.ted
 
-.. autofunction:: asdm_recoverable
+.. automethod:: asdm.asdm_recoverable

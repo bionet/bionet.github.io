@@ -1,6 +1,6 @@
 bionet.ted.iaf.iaf_decode_fast
 ==============================
 
-.. currentmodule:: bionet.ted.iaf
+.. currentmodule:: bionet.ted
 
-.. autofunction:: iaf_decode_fast
+.. automethod:: iaf.iaf_decode_fast

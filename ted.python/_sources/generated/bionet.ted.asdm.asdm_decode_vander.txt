@@ -1,6 +1,6 @@
 bionet.ted.asdm.asdm_decode_vander
 ==================================
 
-.. currentmodule:: bionet.ted.asdm
+.. currentmodule:: bionet.ted
 
-.. autofunction:: asdm_decode_vander
+.. automethod:: asdm.asdm_decode_vander

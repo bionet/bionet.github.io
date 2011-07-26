@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Routines for Solving Vandermonde Systems &mdash; TED v0.062 documentation</title>
+    <title>Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel) &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="index.html" />
     <link rel="up" title="Reference" href="reference.html" />
-    <link rel="next" title="bionet.ted.bpa.bpa" href="generated/bionet.ted.bpa.bpa.html" />
-    <link rel="prev" title="bionet.ted.rt.iaf_encode_delay_rt" href="generated/bionet.ted.rt.iaf_encode_delay_rt.html" /> 
+    <link rel="next" title="bionet.ted.iaf_cuda.iaf_decode" href="generated/bionet.ted.iaf_cuda.iaf_decode.html" />
+    <link rel="prev" title="bionet.ted.iaf_trig.iaf_decode_pop" href="generated/bionet.ted.iaf_trig.iaf_decode_pop.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,10 +34,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="generated/bionet.ted.bpa.bpa.html" title="bionet.ted.bpa.bpa"
+          <a href="generated/bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="generated/bionet.ted.rt.iaf_encode_delay_rt.html" title="bionet.ted.rt.iaf_encode_delay_rt"
+          <a href="generated/bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
@@ -49,19 +49,32 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="routines-for-solving-vandermonde-systems">
-<h1>Routines for Solving Vandermonde Systems<a class="headerlink" href="#routines-for-solving-vandermonde-systems" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="integrate-and-fire-neuron-cuda-routines-sinc-kernel">
+<h1>Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)<a class="headerlink" href="#integrate-and-fire-neuron-cuda-routines-sinc-kernel" title="Permalink to this headline">¶</a></h1>
+<p>These routines make use of <a class="reference external" href="http://www.nvidia.com/object/cuda_home_new.html">CUDA</a>.</p>
+<div class="section" id="single-input-single-output-machines">
+<h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.bpa.bpa.html#bionet.ted.bpa.bpa" title="bionet.ted.bpa.bpa"><tt class="xref py py-obj docutils literal"><span class="pre">bpa</span></tt></a></td>
-<td>Solve a Vandermonde system using BPA.</td>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode.html#bionet.ted.iaf_cuda.iaf_decode" title="bionet.ted.iaf_cuda.iaf_decode"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode</span></tt></a></td>
+<td>IAF time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode_pop.html#bionet.ted.iaf_cuda.iaf_decode_pop" title="bionet.ted.iaf_cuda.iaf_decode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode_pop</span></tt></a></td>
+<td>Multiple-input single-output IAF time decoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_encode.html#bionet.ted.iaf_cuda.iaf_encode" title="bionet.ted.iaf_cuda.iaf_encode"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_encode</span></tt></a></td>
+<td>IAF time encoding machine.</td>
+</tr>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_encode_pop.html#bionet.ted.iaf_cuda.iaf_encode_pop" title="bionet.ted.iaf_cuda.iaf_encode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_encode_pop</span></tt></a></td>
+<td>Population IAF time encoding machine.</td>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 
 
@@ -70,9 +83,19 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)</a><ul>
+<li><a class="reference internal" href="#single-input-single-output-machines">Single-Input Single-Output Machines</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/reference_bpa.txt"
+              <li><a href="_sources/reference_iaf_sinc_cuda.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -99,10 +122,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="generated/bionet.ted.bpa.bpa.html" title="bionet.ted.bpa.bpa"
+          <a href="generated/bionet.ted.iaf_cuda.iaf_decode.html" title="bionet.ted.iaf_cuda.iaf_decode"
              >next</a> |</li>
         <li class="right" >
-          <a href="generated/bionet.ted.rt.iaf_encode_delay_rt.html" title="bionet.ted.rt.iaf_encode_delay_rt"
+          <a href="generated/bionet.ted.iaf_trig.iaf_decode_pop.html" title="bionet.ted.iaf_trig.iaf_decode_pop"
              >previous</a> |</li>
         <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="reference.html" >Reference</a> &raquo;</li> 

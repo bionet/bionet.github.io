@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Asynchronous Sigma-Delta Modulator Routines &mdash; TED v0.062 documentation</title>
+    <title>Integrate-and-Fire Neuron Routines (Dirichlet Kernel) &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,8 +23,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="index.html" />
     <link rel="up" title="Reference" href="reference.html" />
-    <link rel="next" title="bionet.ted.asdm.asdm_decode" href="generated/bionet.ted.asdm.asdm_decode.html" />
-    <link rel="prev" title="Reference" href="reference.html" /> 
+    <link rel="next" title="bionet.ted.iaf_trig.iaf_decode" href="generated/bionet.ted.iaf_trig.iaf_decode.html" />
+    <link rel="prev" title="bionet.ted.iaf.iaf_recoverable" href="generated/bionet.ted.iaf.iaf_recoverable.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,10 +34,10 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="generated/bionet.ted.asdm.asdm_decode.html" title="bionet.ted.asdm.asdm_decode"
+          <a href="generated/bionet.ted.iaf_trig.iaf_decode.html" title="bionet.ted.iaf_trig.iaf_decode"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="reference.html" title="Reference"
+          <a href="generated/bionet.ted.iaf.iaf_recoverable.html" title="bionet.ted.iaf.iaf_recoverable"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
@@ -49,8 +49,8 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="asynchronous-sigma-delta-modulator-routines">
-<h1>Asynchronous Sigma-Delta Modulator Routines<a class="headerlink" href="#asynchronous-sigma-delta-modulator-routines" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="integrate-and-fire-neuron-routines-dirichlet-kernel">
+<h1>Integrate-and-Fire Neuron Routines (Dirichlet Kernel)<a class="headerlink" href="#integrate-and-fire-neuron-routines-dirichlet-kernel" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="single-input-single-output-machines">
 <h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
@@ -59,17 +59,8 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode.html#bionet.ted.asdm.asdm_decode" title="bionet.ted.asdm.asdm_decode"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode</span></tt></a></td>
-<td>ASDM time decoding machine.</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_fast.html#bionet.ted.asdm.asdm_decode_fast" title="bionet.ted.asdm.asdm_decode_fast"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_fast</span></tt></a></td>
-<td>Fast ASDM time decoding machine.</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_ins.html#bionet.ted.asdm.asdm_decode_ins" title="bionet.ted.asdm.asdm_decode_ins"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_ins</span></tt></a></td>
-<td>Threshold-insensitive ASDM time decoding machine.</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_encode.html#bionet.ted.asdm.asdm_encode" title="bionet.ted.asdm.asdm_encode"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_encode</span></tt></a></td>
-<td>ASDM time encoding machine.</td>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_trig.iaf_decode.html#bionet.ted.iaf_trig.iaf_decode" title="bionet.ted.iaf_trig.iaf_decode"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode</span></tt></a></td>
+<td>IAF time decoding machine using trigonometric polynomials.</td>
 </tr>
 </tbody>
 </table>
@@ -82,31 +73,8 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_pop.html#bionet.ted.asdm.asdm_decode_pop" title="bionet.ted.asdm.asdm_decode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_pop</span></tt></a></td>
-<td>Multi-input single-output ASDM time decoding machine.</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_pop_ins.html#bionet.ted.asdm.asdm_decode_pop_ins" title="bionet.ted.asdm.asdm_decode_pop_ins"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_pop_ins</span></tt></a></td>
-<td>Threshold-insensitive multi-input single-output time decoding machine.</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_vander.html#bionet.ted.asdm.asdm_decode_vander" title="bionet.ted.asdm.asdm_decode_vander"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_vander</span></tt></a></td>
-<td>Asynchronous Sigma-Delta Modulator time decoding machine that uses</td>
-</tr>
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_decode_vander_ins.html#bionet.ted.asdm.asdm_decode_vander_ins" title="bionet.ted.asdm.asdm_decode_vander_ins"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_decode_vander_ins</span></tt></a></td>
-<td>Threshold-insensitive ASDM time decoding machine that uses BPA.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="supporting-routines">
-<h2>Supporting Routines<a class="headerlink" href="#supporting-routines" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.asdm.asdm_recoverable.html#bionet.ted.asdm.asdm_recoverable" title="bionet.ted.asdm.asdm_recoverable"><tt class="xref py py-obj docutils literal"><span class="pre">asdm_recoverable</span></tt></a></td>
-<td>ASDM time encoding parameter check.</td>
+<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_trig.iaf_decode_pop.html#bionet.ted.iaf_trig.iaf_decode_pop" title="bionet.ted.iaf_trig.iaf_decode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode_pop</span></tt></a></td>
+<td>Multi-input single-output IAF time decoding machine.</td>
 </tr>
 </tbody>
 </table>
@@ -121,14 +89,11 @@
         <div class="sphinxsidebarwrapper">
             <h3><a href="index.html">Table Of Contents</a></h3>
             <ul>
-<li><a class="reference internal" href="#">Asynchronous Sigma-Delta Modulator Routines</a><ul>
+<li><a class="reference internal" href="#">Integrate-and-Fire Neuron Routines (Dirichlet Kernel)</a><ul>
 <li><a class="reference internal" href="#single-input-single-output-machines">Single-Input Single-Output Machines</a><ul>
 </ul>
 </li>
 <li><a class="reference internal" href="#multi-input-single-output-machines">Multi-Input Single-Output Machines</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#supporting-routines">Supporting Routines</a><ul>
 </ul>
 </li>
 </ul>
@@ -137,7 +102,7 @@
 
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/reference_asdm.txt"
+              <li><a href="_sources/reference_iaf_trig.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -164,10 +129,10 @@
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="generated/bionet.ted.asdm.asdm_decode.html" title="bionet.ted.asdm.asdm_decode"
+          <a href="generated/bionet.ted.iaf_trig.iaf_decode.html" title="bionet.ted.iaf_trig.iaf_decode"
              >next</a> |</li>
         <li class="right" >
-          <a href="reference.html" title="Reference"
+          <a href="generated/bionet.ted.iaf.iaf_recoverable.html" title="bionet.ted.iaf.iaf_recoverable"
              >previous</a> |</li>
         <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="reference.html" >Reference</a> &raquo;</li> 

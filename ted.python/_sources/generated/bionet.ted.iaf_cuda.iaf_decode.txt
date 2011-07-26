@@ -1,6 +1,6 @@
 bionet.ted.iaf_cuda.iaf_decode
 ==============================
 
-.. currentmodule:: bionet.ted.iaf_cuda
+.. currentmodule:: bionet.ted
 
-.. autofunction:: iaf_decode
+.. automethod:: iaf_cuda.iaf_decode

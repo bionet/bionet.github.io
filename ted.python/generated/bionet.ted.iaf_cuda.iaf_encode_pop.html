@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf.iaf_encode_delay &mdash; TED v0.062 documentation</title>
+    <title>bionet.ted.iaf_cuda.iaf_encode_pop &mdash; TED v0.062 documentation</title>
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,9 +22,9 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="TED v0.062 documentation" href="../index.html" />
-    <link rel="up" title="Integrate-and-Fire Neuron Routines (Sinc Kernel)" href="../reference_iaf_sinc.html" />
-    <link rel="next" title="bionet.ted.iaf.iaf_encode_pop" href="bionet.ted.iaf.iaf_encode_pop.html" />
-    <link rel="prev" title="bionet.ted.iaf.iaf_decode_delay" href="bionet.ted.iaf.iaf_decode_delay.html" /> 
+    <link rel="up" title="Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)" href="../reference_iaf_sinc_cuda.html" />
+    <link rel="next" title="Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)" href="../reference_iaf_trig_cuda.html" />
+    <link rel="prev" title="bionet.ted.iaf_cuda.iaf_encode" href="bionet.ted.iaf_cuda.iaf_encode.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,14 +34,14 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_encode_pop.html" title="bionet.ted.iaf.iaf_encode_pop"
+          <a href="../reference_iaf_trig_cuda.html" title="Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
+          <a href="bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" accesskey="U">Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_sinc_cuda.html" accesskey="U">Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -50,86 +50,80 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="bionet-ted-iaf-iaf-encode-delay">
-<h1>bionet.ted.iaf.iaf_encode_delay<a class="headerlink" href="#bionet-ted-iaf-iaf-encode-delay" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bionet-ted-iaf-cuda-iaf-encode-pop">
+<h1>bionet.ted.iaf_cuda.iaf_encode_pop<a class="headerlink" href="#bionet-ted-iaf-cuda-iaf-encode-pop" title="Permalink to this headline">¶</a></h1>
 <dl class="staticmethod">
-<dt id="bionet.ted.iaf.iaf_encode_delay">
-<em class="property">static </em><tt class="descclassname">iaf.</tt><tt class="descname">iaf_encode_delay</tt><big>(</big><em>u_list</em>, <em>t_start</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em>, <em>y_list=None</em>, <em>interval_list=None</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_encode_delay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Multi-input multi-output delayed IAF time encoding machine.</p>
-<p>Encode several signals with an ensemble of ideal
-Integrate-and-Fire neurons with delays.</p>
+<dt id="bionet.ted.iaf_cuda.iaf_encode_pop">
+<em class="property">static </em><tt class="descclassname">iaf_cuda.</tt><tt class="descname">iaf_encode_pop</tt><big>(</big><em>u_gpu</em>, <em>dt</em>, <em>b_gpu</em>, <em>d_gpu</em>, <em>R_gpu</em>, <em>C_gpu</em>, <em>y_gpu=None</em>, <em>interval_gpu=None</em>, <em>quad_method='trapz'</em>, <em>full_output=False</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf_cuda.iaf_encode_pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Population IAF time encoding machine.</p>
+<p>Encode a finite length signal with a population of Integrate-and-Fire
+Neurons.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u_list</strong> : list of ndarrays of floats</p>
+<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Signals to encode. Each of the ndarrays must be of the same
-length.</p>
-</div></blockquote>
-<p><strong>t_start</strong> : float</p>
-<blockquote>
-<div><p>Time at which to begin encoding (in s).</p>
+<div><p>Signal to encode.</p>
 </div></blockquote>
 <p><strong>dt</strong> : float</p>
 <blockquote>
-<div><p>Sampling resolution of input signals; the sampling frequency
-is 1/dt Hz.</p>
+<div><p>Sampling resolution of input signal; the sampling frequency is
+1/dt Hz.</p>
 </div></blockquote>
-<p><strong>b_list</strong> : list of floats</p>
+<p><strong>b_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>List of encoder biases.</p>
+<div><p>Array of encoder biases.</p>
 </div></blockquote>
-<p><strong>d_list</strong> : list of floats</p>
+<p><strong>d_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>List of encoder thresholds.</p>
+<div><p>Array of encoder thresholds.</p>
 </div></blockquote>
-<p><strong>k_list</strong> : list of floats</p>
+<p><strong>R_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>List of encoder integration constants.</p>
+<div><p>Array of neuron resistances.</p>
 </div></blockquote>
-<p><strong>a_list</strong> : N x M array_like of floats.</p>
+<p><strong>C_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Neuron delays (in s).</p>
+<div><p>Array of neuron capacitances.</p>
 </div></blockquote>
-<p><strong>w_list</strong> : N x M array_like of floats.</p>
-<blockquote>
-<div><p>Scaling factors.</p>
-</div></blockquote>
-<p><strong>y_list</strong> : list of floats</p>
+<p><strong>y_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
 <div><p>Initial values of integrators.</p>
 </div></blockquote>
-<p><strong>interval_list</strong> : list of floats</p>
+<p><strong>interval_gpu</strong> : pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>Times since last spikes (in s).</p>
+<div><p>Times since last spike (in s) for each neuron.</p>
+</div></blockquote>
+<p><strong>quad_method</strong> : {&#8216;rect&#8217;, &#8216;trapz&#8217;}</p>
+<blockquote>
+<div><p>Quadrature method to use (rectangular or trapezoidal) when the
+neuron is ideal; exponential Euler integration is used
+when the neuron is leaky.</p>
 </div></blockquote>
 <p><strong>full_output</strong> : bool</p>
 <blockquote>
-<div><p>If set, the function returns the encoded data block followed
-by the given parameters (with updated values for <cite>y</cite> and <cite>interval</cite>).
-This is useful when the function is called repeatedly to
-encode a long signal.</p>
+<div><p>If true, the function returns the updated arrays <cite>y_gpu</cite> and
+<cite>interval_gpu</cite> in addition to the the encoded data block.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>s_list</strong> : list of ndarrays of floats</p>
+<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>[s_gpu, ns_gpu]</strong> : list of pycuda.gpuarray.GPUArray</p>
 <blockquote>
-<div><p>If <cite>full_output</cite> == False, returns the signals encoded as a list
-of arrays of time intervals between spikes.</p>
+<div><p>If <cite>full_output</cite> is false, returns the encoded signal as a
+matrix <cite>s_gpu</cite> whose rows contain the spike times generated by each
+neuron. The number of spike times in each row is returned in
+<cite>ns_gpu</cite>; all other values in <cite>s_gpu</cite> are set to 0.</p>
 </div></blockquote>
-<p><strong>[s_list, t_start, dt, b_list, d_list, k_list, a_list, w_list, y_list,</strong> :</p>
-<p><strong>interval_list, u_list_prev, full_output]</strong> : list</p>
+<p><strong>[s_gpu, ns_gpu, y_gpu, interval_gpu]</strong> : list of pycuda.gpuarray.GPUArray</p>
 <blockquote class="last">
-<div><p>If <cite>full_output</cite> == True, returns the encoded signals followed
-by updated encoder parameters.</p>
+<div><p>If <cite>full_output</cite> is true, returns the encoded signal
+followed by updated encoder parameters.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Notes</p>
-<p><cite>t_start</cite> must exceed <cite>max(a)</cite>.</p>
 </dd></dl>
 
 </div>
@@ -142,7 +136,7 @@ by updated encoder parameters.</p>
         <div class="sphinxsidebarwrapper">
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_encode_delay.txt"
+              <li><a href="../_sources/generated/bionet.ted.iaf_cuda.iaf_encode_pop.txt"
                      rel="nofollow">Show Source</a></li>
             </ul>
           <div id="searchbox" style="display: none">
@@ -169,14 +163,14 @@ by updated encoder parameters.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_encode_pop.html" title="bionet.ted.iaf.iaf_encode_pop"
+          <a href="../reference_iaf_trig_cuda.html" title="Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)"
              >next</a> |</li>
         <li class="right" >
-          <a href="bionet.ted.iaf.iaf_decode_delay.html" title="bionet.ted.iaf.iaf_decode_delay"
+          <a href="bionet.ted.iaf_cuda.iaf_encode.html" title="bionet.ted.iaf_cuda.iaf_encode"
              >previous</a> |</li>
         <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
-          <li><a href="../reference_iaf_sinc.html" >Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
+          <li><a href="../reference_iaf_sinc_cuda.html" >Integrate-and-Fire Neuron CUDA Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
