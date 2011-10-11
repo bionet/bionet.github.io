@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.rt.ASDMRealTimeEncoder &mdash; TED v0.062 documentation</title>
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <title>bionet.ted.rt.ASDMRealTimeEncoder &mdash; TED 0.063 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.062',
+        VERSION:     '0.063',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
+    <link rel="top" title="TED 0.063 documentation" href="../index.html" />
     <link rel="up" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
     <link rel="next" title="bionet.ted.rt.IAFRealTimeDecoder" href="bionet.ted.rt.IAFRealTimeDecoder.html" />
     <link rel="prev" title="bionet.ted.rt.ASDMRealTimeDecoderIns" href="bionet.ted.rt.ASDMRealTimeDecoderIns.html" /> 
@@ -39,11 +39,33 @@
         <li class="right" >
           <a href="bionet.ted.rt.ASDMRealTimeDecoderIns.html" title="bionet.ted.rt.ASDMRealTimeDecoderIns"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_rt.html" accesskey="U">Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.rt.ASDMRealTimeEncoder.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
 
     <div class="document">
       <div class="documentwrapper">
@@ -62,7 +84,7 @@ an Asynchronous Sigma-Delta Modulator to encode data.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>dt</strong> : float</p>
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>dt</strong> : float</p>
 <blockquote>
 <div><p>Sampling resolution of input signal; the sampling frequency
 is <cite>1/dt</cite> Hz.</p>
@@ -99,10 +121,10 @@ is <cite>1/dt</cite> Hz.</p>
 <col width="78%" />
 </colgroup>
 <tbody valign="top">
-<tr><td>encode(data, ...)</td>
+<tr class="row-odd"><td>encode(data, ...)</td>
 <td>Encode a block of data using the additional parameters.</td>
 </tr>
-<tr><td>process(get, put)</td>
+<tr class="row-even"><td>process(get, put)</td>
 <td>Process data obtained from <cite>get()</cite> and write it using <cite>put()</cite>.</td>
 </tr>
 </tbody>
@@ -113,19 +135,19 @@ is <cite>1/dt</cite> Hz.</p>
 <dd></dd></dl>
 
 <p class="rubric">Methods</p>
-<table border="1" class="docutils">
+<table border="1" class="longtable docutils">
 <colgroup>
 <col width="10%" />
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr><td><a class="reference internal" href="#bionet.ted.rt.ASDMRealTimeEncoder.__init__" title="bionet.ted.rt.ASDMRealTimeEncoder.__init__"><tt class="xref py py-obj docutils literal"><span class="pre">__init__</span></tt></a>(dt,&nbsp;b,&nbsp;d[,&nbsp;k,&nbsp;dte,&nbsp;quad_method])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#bionet.ted.rt.ASDMRealTimeEncoder.__init__" title="bionet.ted.rt.ASDMRealTimeEncoder.__init__"><tt class="xref py py-obj docutils literal"><span class="pre">__init__</span></tt></a>(dt,&nbsp;b,&nbsp;d[,&nbsp;k,&nbsp;dte,&nbsp;quad_method])</td>
 <td></td>
 </tr>
-<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">encode</span></tt>(data)</td>
+<tr class="row-even"><td><tt class="xref py py-obj docutils literal"><span class="pre">encode</span></tt>(data)</td>
 <td>Encode a block of data with an ASDM encoder.</td>
 </tr>
-<tr><td><tt class="xref py py-obj docutils literal"><span class="pre">process</span></tt>(get,&nbsp;put)</td>
+<tr class="row-odd"><td><tt class="xref py py-obj docutils literal"><span class="pre">process</span></tt>(get,&nbsp;put)</td>
 <td>Encode data returned in blocks by function <cite>get()</cite> and</td>
 </tr>
 </tbody>
@@ -136,28 +158,6 @@ is <cite>1/dt</cite> Hz.</p>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.rt.ASDMRealTimeEncoder.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -174,14 +174,14 @@ is <cite>1/dt</cite> Hz.</p>
         <li class="right" >
           <a href="bionet.ted.rt.ASDMRealTimeDecoderIns.html" title="bionet.ted.rt.ASDMRealTimeDecoderIns"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_rt.html" >Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009-2011, Lev Givon.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>

@@ -1,6 +1,6 @@
 bionet.ted.iaf.iaf_encode_coupled
 =================================
 
-.. currentmodule:: bionet.ted
+.. currentmodule:: bionet.ted.iaf
 
-.. automethod:: iaf.iaf_encode_coupled
+.. autofunction:: iaf_encode_coupled

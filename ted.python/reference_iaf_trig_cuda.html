@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel) &mdash; TED v0.062 documentation</title>
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <title>Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel) &mdash; TED 0.063 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '#',
-        VERSION:     '0.062',
+        VERSION:     '0.063',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="TED v0.062 documentation" href="index.html" />
+    <link rel="top" title="TED 0.063 documentation" href="index.html" />
     <link rel="up" title="Reference" href="reference.html" />
     <link rel="next" title="bionet.ted.iaf_cuda.iaf_decode" href="generated/bionet.ted.iaf_cuda.iaf_decode.html" />
     <link rel="prev" title="bionet.ted.iaf_cuda.iaf_encode_pop" href="generated/bionet.ted.iaf_cuda.iaf_encode_pop.html" /> 
@@ -39,53 +39,10 @@
         <li class="right" >
           <a href="generated/bionet.ted.iaf_cuda.iaf_encode_pop.html" title="bionet.ted.iaf_cuda.iaf_encode_pop"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="integrate-and-fire-neuron-cuda-routines-dirichlet-kernel">
-<h1>Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)<a class="headerlink" href="#integrate-and-fire-neuron-cuda-routines-dirichlet-kernel" title="Permalink to this headline">¶</a></h1>
-<p>These routines make use of <a class="reference external" href="http://www.nvidia.com/object/cuda_home_new.html">CUDA</a>.</p>
-<div class="section" id="single-input-single-output-machines">
-<h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode.html#bionet.ted.iaf_cuda.iaf_decode" title="bionet.ted.iaf_cuda.iaf_decode"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode</span></tt></a></td>
-<td>IAF time decoding machine.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="multi-input-single-output-machines">
-<h2>Multi-Input Single-Output Machines<a class="headerlink" href="#multi-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
-<table border="1" class="docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode_pop.html#bionet.ted.iaf_cuda.iaf_decode_pop" title="bionet.ted.iaf_cuda.iaf_decode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode_pop</span></tt></a></td>
-<td>Multiple-input single-output IAF time decoding machine.</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div> 
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <h3><a href="index.html">Table Of Contents</a></h3>
@@ -120,6 +77,49 @@
           </div>
           <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="integrate-and-fire-neuron-cuda-routines-dirichlet-kernel">
+<h1>Integrate-and-Fire Neuron CUDA Routines (Dirichlet Kernel)<a class="headerlink" href="#integrate-and-fire-neuron-cuda-routines-dirichlet-kernel" title="Permalink to this headline">¶</a></h1>
+<p>These routines make use of <a class="reference external" href="http://www.nvidia.com/object/cuda_home_new.html">CUDA</a>.</p>
+<div class="section" id="single-input-single-output-machines">
+<h2>Single-Input Single-Output Machines<a class="headerlink" href="#single-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode.html#bionet.ted.iaf_cuda.iaf_decode" title="bionet.ted.iaf_cuda.iaf_decode"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode</span></tt></a></td>
+<td>IAF time decoding machine.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="multi-input-single-output-machines">
+<h2>Multi-Input Single-Output Machines<a class="headerlink" href="#multi-input-single-output-machines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.ted.iaf_cuda.iaf_decode_pop.html#bionet.ted.iaf_cuda.iaf_decode_pop" title="bionet.ted.iaf_cuda.iaf_decode_pop"><tt class="xref py py-obj docutils literal"><span class="pre">iaf_decode_pop</span></tt></a></td>
+<td>Multiple-input single-output IAF time decoding machine.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
       </div>
       <div class="clearer"></div>
     </div>
@@ -135,13 +135,13 @@
         <li class="right" >
           <a href="generated/bionet.ted.iaf_cuda.iaf_encode_pop.html" title="bionet.ted.iaf_cuda.iaf_encode_pop"
              >previous</a> |</li>
-        <li><a href="index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="reference.html" >Reference</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009-2011, Lev Givon.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>

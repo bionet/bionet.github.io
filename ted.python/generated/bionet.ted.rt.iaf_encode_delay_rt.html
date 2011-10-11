@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.rt.iaf_encode_delay_rt &mdash; TED v0.062 documentation</title>
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <title>bionet.ted.rt.iaf_encode_delay_rt &mdash; TED 0.063 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.062',
+        VERSION:     '0.063',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
+    <link rel="top" title="TED 0.063 documentation" href="../index.html" />
     <link rel="up" title="Real-Time Time Encoder and Decoder Classes" href="../reference_rt.html" />
     <link rel="next" title="Routines for Solving Vandermonde Systems" href="../reference_bpa.html" />
     <link rel="prev" title="bionet.ted.rt.iaf_decode_delay_rt" href="bionet.ted.rt.iaf_decode_delay_rt.html" /> 
@@ -39,11 +39,33 @@
         <li class="right" >
           <a href="bionet.ted.rt.iaf_decode_delay_rt.html" title="bionet.ted.rt.iaf_decode_delay_rt"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_rt.html" accesskey="U">Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.rt.iaf_encode_delay_rt.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
 
     <div class="document">
       <div class="documentwrapper">
@@ -52,9 +74,9 @@
             
   <div class="section" id="bionet-ted-rt-iaf-encode-delay-rt">
 <h1>bionet.ted.rt.iaf_encode_delay_rt<a class="headerlink" href="#bionet-ted-rt-iaf-encode-delay-rt" title="Permalink to this headline">¶</a></h1>
-<dl class="staticmethod">
+<dl class="function">
 <dt id="bionet.ted.rt.iaf_encode_delay_rt">
-<em class="property">static </em><tt class="descclassname">rt.</tt><tt class="descname">iaf_encode_delay_rt</tt><big>(</big><em>u_list</em>, <em>T_block</em>, <em>t_begin</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em><big>)</big><a class="headerlink" href="#bionet.ted.rt.iaf_encode_delay_rt" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">bionet.ted.rt.</tt><tt class="descname">iaf_encode_delay_rt</tt><big>(</big><em>u_list</em>, <em>T_block</em>, <em>t_begin</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>k_list</em>, <em>a_list</em>, <em>w_list</em><big>)</big><a class="headerlink" href="#bionet.ted.rt.iaf_encode_delay_rt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Real-time multi-input multi-output delayed IAF time encoding machine.</p>
 <p>Encode several with an ensemble of ideal Integrate-and-Fire
 neurons with delays.</p>
@@ -62,7 +84,7 @@ neurons with delays.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u_list</strong> : list</p>
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u_list</strong> : list</p>
 <blockquote>
 <div><p>Signals to encode. Must contain <cite>M</cite> arrays of equal length.</p>
 </div></blockquote>
@@ -101,7 +123,7 @@ is 1/dt Hz.</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>s_list</strong> : list</p>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>s_list</strong> : list</p>
 <blockquote class="last">
 <div><p>List of arrays of interspike intervals.</p>
 </div></blockquote>
@@ -115,28 +137,6 @@ is 1/dt Hz.</p>
 
 
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.rt.iaf_encode_delay_rt.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -153,14 +153,14 @@ is 1/dt Hz.</p>
         <li class="right" >
           <a href="bionet.ted.rt.iaf_decode_delay_rt.html" title="bionet.ted.rt.iaf_decode_delay_rt"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_rt.html" >Real-Time Time Encoder and Decoder Classes</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009-2011, Lev Givon.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>

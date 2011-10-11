@@ -1,6 +1,6 @@
 bionet.ted.iaf.iaf_encode_delay
 ===============================
 
-.. currentmodule:: bionet.ted
+.. currentmodule:: bionet.ted.iaf
 
-.. automethod:: iaf.iaf_encode_delay
+.. autofunction:: iaf_encode_delay

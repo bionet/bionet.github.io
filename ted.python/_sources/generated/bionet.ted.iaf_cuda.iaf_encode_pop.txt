@@ -1,6 +1,6 @@
 bionet.ted.iaf_cuda.iaf_encode_pop
 ==================================
 
-.. currentmodule:: bionet.ted
+.. currentmodule:: bionet.ted.iaf_cuda
 
-.. automethod:: iaf_cuda.iaf_encode_pop
+.. autofunction:: iaf_encode_pop

@@ -1,6 +1,6 @@
 bionet.ted.iaf_trig.iaf_decode
 ==============================
 
-.. currentmodule:: bionet.ted
+.. currentmodule:: bionet.ted.iaf_trig
 
-.. automethod:: iaf_trig.iaf_decode
+.. autofunction:: iaf_decode

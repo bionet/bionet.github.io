@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.iaf.iaf_decode_spline_pop &mdash; TED v0.062 documentation</title>
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <title>bionet.ted.iaf.iaf_decode_spline_pop &mdash; TED 0.063 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.062',
+        VERSION:     '0.063',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
+    <link rel="top" title="TED 0.063 documentation" href="../index.html" />
     <link rel="up" title="Integrate-and-Fire Neuron Routines (Sinc Kernel)" href="../reference_iaf_sinc.html" />
     <link rel="next" title="bionet.ted.iaf.iaf_decode_delay" href="bionet.ted.iaf.iaf_decode_delay.html" />
     <link rel="prev" title="bionet.ted.iaf.iaf_decode_pop" href="bionet.ted.iaf.iaf_decode_pop.html" /> 
@@ -39,11 +39,33 @@
         <li class="right" >
           <a href="bionet.ted.iaf.iaf_decode_pop.html" title="bionet.ted.iaf.iaf_decode_pop"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf_sinc.html" accesskey="U">Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
-    </div>  
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_decode_spline_pop.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
 
     <div class="document">
       <div class="documentwrapper">
@@ -52,9 +74,9 @@
             
   <div class="section" id="bionet-ted-iaf-iaf-decode-spline-pop">
 <h1>bionet.ted.iaf.iaf_decode_spline_pop<a class="headerlink" href="#bionet-ted-iaf-iaf-decode-spline-pop" title="Permalink to this headline">¶</a></h1>
-<dl class="staticmethod">
+<dl class="function">
 <dt id="bionet.ted.iaf.iaf_decode_spline_pop">
-<em class="property">static </em><tt class="descclassname">iaf.</tt><tt class="descname">iaf_decode_spline_pop</tt><big>(</big><em>s_list</em>, <em>dur</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>R_list</em>, <em>C_list</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_decode_spline_pop" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">bionet.ted.iaf.</tt><tt class="descname">iaf_decode_spline_pop</tt><big>(</big><em>s_list</em>, <em>dur</em>, <em>dt</em>, <em>b_list</em>, <em>d_list</em>, <em>R_list</em>, <em>C_list</em><big>)</big><a class="headerlink" href="#bionet.ted.iaf.iaf_decode_spline_pop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Multi-input single-output spline interpolation IAF time decoding machine.</p>
 <p>Decode a signal encoded with an ensemble of Integrate-and-Fire
 neurons using spline interpolation.</p>
@@ -62,7 +84,7 @@ neurons using spline interpolation.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s_list: list of ndarrays of floats</strong> :</p>
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>s_list: list of ndarrays of floats</strong> :</p>
 <blockquote>
 <div><p>Signal encoded by an ensemble of encoders. The values represent the
 time between spikes (in s). The number of arrays in the list
@@ -92,7 +114,7 @@ is 1/dt Hz.</p>
 <p><strong>C_list: list of floats.</strong> :</p>
 </td>
 </tr>
-<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>u_rec</strong> : ndarray of floats</p>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>u_rec</strong> : ndarray of floats</p>
 <blockquote class="last">
 <div><p>Recovered signal.</p>
 </div></blockquote>
@@ -111,28 +133,6 @@ number contributed by other neurons.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-            <h3>This Page</h3>
-            <ul class="this-page-menu">
-              <li><a href="../_sources/generated/bionet.ted.iaf.iaf_decode_spline_pop.txt"
-                     rel="nofollow">Show Source</a></li>
-            </ul>
-          <div id="searchbox" style="display: none">
-            <h3>Quick search</h3>
-              <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" size="18" />
-                <input type="submit" value="Go" />
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-              </form>
-              <p class="searchtip" style="font-size: 90%">
-              Enter search terms or a module, class or function name.
-              </p>
-          </div>
-          <script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -147,14 +147,14 @@ number contributed by other neurons.</p>
         <li class="right" >
           <a href="bionet.ted.iaf.iaf_decode_pop.html" title="bionet.ted.iaf.iaf_decode_pop"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_iaf_sinc.html" >Integrate-and-Fire Neuron Routines (Sinc Kernel)</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009-2011, Lev Givon.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>

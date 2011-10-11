@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>bionet.ted.asdm.asdm_recoverable &mdash; TED v0.062 documentation</title>
-    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <title>bionet.ted.asdm.asdm_recoverable &mdash; TED 0.063 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.062',
+        VERSION:     '0.063',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="TED v0.062 documentation" href="../index.html" />
+    <link rel="top" title="TED 0.063 documentation" href="../index.html" />
     <link rel="up" title="Asynchronous Sigma-Delta Modulator Routines" href="../reference_asdm.html" />
     <link rel="next" title="Integrate-and-Fire Neuron Routines (Sinc Kernel)" href="../reference_iaf_sinc.html" />
     <link rel="prev" title="bionet.ted.asdm.asdm_decode_vander_ins" href="bionet.ted.asdm.asdm_decode_vander_ins.html" /> 
@@ -39,77 +39,11 @@
         <li class="right" >
           <a href="bionet.ted.asdm.asdm_decode_vander_ins.html" title="bionet.ted.asdm.asdm_decode_vander_ins"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_asdm.html" accesskey="U">Asynchronous Sigma-Delta Modulator Routines</a> &raquo;</li> 
       </ul>
-    </div>  
-
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body">
-            
-  <div class="section" id="bionet-ted-asdm-asdm-recoverable">
-<h1>bionet.ted.asdm.asdm_recoverable<a class="headerlink" href="#bionet-ted-asdm-asdm-recoverable" title="Permalink to this headline">¶</a></h1>
-<dl class="staticmethod">
-<dt id="bionet.ted.asdm.asdm_recoverable">
-<em class="property">static </em><tt class="descclassname">asdm.</tt><tt class="descname">asdm_recoverable</tt><big>(</big><em>u</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>k</em><big>)</big><a class="headerlink" href="#bionet.ted.asdm.asdm_recoverable" title="Permalink to this definition">¶</a></dt>
-<dd><p>ASDM time encoding parameter check.</p>
-<p>Determine whether a signal encoded with an Asynchronous
-Sigma-Delta Modulator using the specified parameters can be
-perfectly recovered.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u: array_like of floats</strong> :</p>
-<blockquote>
-<div><p>Signal to test.</p>
-</div></blockquote>
-<p><strong>bw: float</strong> :</p>
-<blockquote>
-<div><p>Signal bandwidth (in rad/s).</p>
-</div></blockquote>
-<p><strong>b: float</strong> :</p>
-<blockquote>
-<div><p>Decoder bias.</p>
-</div></blockquote>
-<p><strong>d: float</strong> :</p>
-<blockquote>
-<div><p>Decoder threshold.</p>
-</div></blockquote>
-<p><strong>k: float</strong> :</p>
-<blockquote>
-<div><p>Decoder integration constant.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>rec</strong> : bool</p>
-<blockquote>
-<div><p>True if the specified signal is recoverable.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
-<blockquote class="last">
-<div><p>When the signal cannot be perfectly recovered.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-<p class="rubric">Notes</p>
-<p>The bound assumed by this check is not as strict as that described in
-most of Prof. Lazar&#8217;s papers.</p>
-</dd></dl>
-
-</div>
-
-
-          </div>
-        </div>
-      </div>
+    </div> 
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <h3>This Page</h3>
@@ -131,6 +65,72 @@ most of Prof. Lazar&#8217;s papers.</p>
           </div>
           <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-ted-asdm-asdm-recoverable">
+<h1>bionet.ted.asdm.asdm_recoverable<a class="headerlink" href="#bionet-ted-asdm-asdm-recoverable" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.ted.asdm.asdm_recoverable">
+<tt class="descclassname">bionet.ted.asdm.</tt><tt class="descname">asdm_recoverable</tt><big>(</big><em>u</em>, <em>bw</em>, <em>b</em>, <em>d</em>, <em>k</em><big>)</big><a class="headerlink" href="#bionet.ted.asdm.asdm_recoverable" title="Permalink to this definition">¶</a></dt>
+<dd><p>ASDM time encoding parameter check.</p>
+<p>Determine whether a signal encoded with an Asynchronous
+Sigma-Delta Modulator using the specified parameters can be
+perfectly recovered.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>u: array_like of floats</strong> :</p>
+<blockquote>
+<div><p>Signal to test.</p>
+</div></blockquote>
+<p><strong>bw: float</strong> :</p>
+<blockquote>
+<div><p>Signal bandwidth (in rad/s).</p>
+</div></blockquote>
+<p><strong>b: float</strong> :</p>
+<blockquote>
+<div><p>Decoder bias.</p>
+</div></blockquote>
+<p><strong>d: float</strong> :</p>
+<blockquote>
+<div><p>Decoder threshold.</p>
+</div></blockquote>
+<p><strong>k: float</strong> :</p>
+<blockquote>
+<div><p>Decoder integration constant.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>rec</strong> : bool</p>
+<blockquote>
+<div><p>True if the specified signal is recoverable.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises :</th><td class="field-body"><p class="first"><strong>ValueError</strong> :</p>
+<blockquote class="last">
+<div><p>When the signal cannot be perfectly recovered.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The bound assumed by this check is not as strict as that described in
+most of Prof. Lazar&#8217;s papers.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
       </div>
       <div class="clearer"></div>
     </div>
@@ -146,14 +146,14 @@ most of Prof. Lazar&#8217;s papers.</p>
         <li class="right" >
           <a href="bionet.ted.asdm.asdm_decode_vander_ins.html" title="bionet.ted.asdm.asdm_decode_vander_ins"
              >previous</a> |</li>
-        <li><a href="../index.html">TED v0.062 documentation</a> &raquo;</li>
+        <li><a href="../index.html">TED 0.063 documentation</a> &raquo;</li>
           <li><a href="../reference.html" >Reference</a> &raquo;</li>
           <li><a href="../reference_asdm.html" >Asynchronous Sigma-Delta Modulator Routines</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2009-2011, Lev Givon.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
     </div>
   </body>
 </html>
