@@ -1,0 +1,183 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Asynchronous Sigma-Delta Modulator Machines &mdash; TED 0.051 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.051',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED 0.051 documentation" href="index.html" />
+    <link rel="up" title="Time Encoding and Decoding Machines" href="machines.html" />
+    <link rel="next" title="Integrate-and-Fire Neuron Machines" href="machines_iaf.html" />
+    <link rel="prev" title="Time Encoding and Decoding Machines" href="machines.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="machines_iaf.html" title="Integrate-and-Fire Neuron Machines"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED 0.051 documentation</a> &raquo;</li>
+          <li><a href="machines.html" accesskey="U">Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Asynchronous Sigma-Delta Modulator Machines</a><ul>
+<li><a class="reference internal" href="#encoding-with-asynchronous-sigma-delta-modulator-asdm">Encoding with Asynchronous Sigma-Delta Modulator (ASDM)</a></li>
+<li><a class="reference internal" href="#decoding-for-signal-encoded-with-single-input-single-output-asdm-encoder">Decoding for Signal Encoded with Single-Input Single-Output ASDM Encoder</a></li>
+<li><a class="reference internal" href="#decoding-for-signal-encoded-with-single-input-multiple-output-asdm-encoder">Decoding for Signal Encoded with Single-Input Multiple-Output ASDM Encoder</a></li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/machines_asdm.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="asynchronous-sigma-delta-modulator-machines">
+<h1>Asynchronous Sigma-Delta Modulator Machines<a class="headerlink" href="#asynchronous-sigma-delta-modulator-machines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="encoding-with-asynchronous-sigma-delta-modulator-asdm">
+<h2>Encoding with Asynchronous Sigma-Delta Modulator (ASDM)<a class="headerlink" href="#encoding-with-asynchronous-sigma-delta-modulator-asdm" title="Permalink to this headline">¶</a></h2>
+<ul id="index-0">
+<li><p class="first"><strong>ASDM Encoding</strong> (<tt class="docutils literal"><span class="pre">asdm_encode.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>:</p>
+<p>Encodes a bandlimited signal using an ASDM encoder. A signal can be
+encoded by a single ASDM encoder (Single-Input Single-Output
+Encoding), as shown below, or it can be encoded by multiple of such
+ASDM encoders (Single-Input Multiple-Output Encoding).</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tem-asdm.png"><img alt="_images/tem-asdm.png" class="align-center" src="_images/tem-asdm.png" style="width: 445.2px; height: 124.8px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="decoding-for-signal-encoded-with-single-input-single-output-asdm-encoder">
+<h2>Decoding for Signal Encoded with Single-Input Single-Output ASDM Encoder<a class="headerlink" href="#decoding-for-signal-encoded-with-single-input-single-output-asdm-encoder" title="Permalink to this headline">¶</a></h2>
+<ul id="index-1">
+<li><p class="first"><strong>Decoding</strong> (<tt class="docutils literal"><span class="pre">asdm_decode.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>:</p>
+<p>Reconstructs a bandlimited signal encoded by an Single-Input
+Single-Output ASDM encoder using sinc kernels.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tdm-sinc.png"><img alt="_images/tdm-sinc.png" class="align-center" src="_images/tdm-sinc.png" style="width: 511.8px; height: 61.8px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+<ul id="index-2">
+<li><p class="first"><strong>Decoding using Fast Approximation Method</strong> (<tt class="docutils literal"><span class="pre">asdm_decode_fast.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/5">[4]</a>:</p>
+<p>Reconstructs a bandlimited signal encoded by a Single-Input
+Single-Output ASDM encoder using a fast approximation method.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tdm-fast.png"><img alt="_images/tdm-fast.png" class="align-center" src="_images/tdm-fast.png" style="width: 511.8px; height: 34.8px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+<ul id="index-3">
+<li><p class="first"><strong>Decoding using Threshold-Insensitive Method</strong>  (<tt class="docutils literal"><span class="pre">asdm_decode_ins.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a>:</p>
+<p>Reconstructs a bandlimited signal encoded by a Single-Input
+Single-Output ASDM encoder. This reconstruction method does not
+require the specification of an integrator threshold.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tdm-sinc-ins.png"><img alt="_images/tdm-sinc-ins.png" class="align-center" src="_images/tdm-sinc-ins.png" style="width: 606.6px; height: 61.8px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="decoding-for-signal-encoded-with-single-input-multiple-output-asdm-encoder">
+<h2>Decoding for Signal Encoded with Single-Input Multiple-Output ASDM Encoder<a class="headerlink" href="#decoding-for-signal-encoded-with-single-input-multiple-output-asdm-encoder" title="Permalink to this headline">¶</a></h2>
+<ul id="index-4">
+<li><p class="first"><strong>Population Decoding</strong> (<tt class="docutils literal"><span class="pre">asdm_decode_pop.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a>:</p>
+<p>Reconstructs a bandlimited signal encoded by multiple ASDM encoders
+using sinc kernels.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tdm-sinc-miso.png"><img alt="_images/tdm-sinc-miso.png" class="align-center" src="_images/tdm-sinc-miso.png" style="width: 673.2px; height: 310.2px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+<ul id="index-5">
+<li><p class="first"><strong>Population Decoding using Threshold-Insensitive Method</strong> (<tt class="docutils literal"><span class="pre">asdm_decode_pop_ins.m</span></tt>) <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/8">[2]</a> <a class="reference external" href="http://bionet.ee.columbia.edu/publications.html?action=publications/printbibtex/22">[7]</a>:</p>
+<p>Reconstructs a bandlimited signal encoded by multiple Asynchronous
+Sigma-Delta Modulators using sinc kernels. This reconstruction
+method does not require the specification of an integrator
+thresholds.</p>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/tdm-sinc-ins-miso.png"><img alt="_images/tdm-sinc-ins-miso.png" class="align-center" src="_images/tdm-sinc-ins-miso.png" style="width: 761.4px; height: 310.2px;" /></a>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="machines_iaf.html" title="Integrate-and-Fire Neuron Machines"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Time Encoding and Decoding Machines"
+             >previous</a> |</li>
+        <li><a href="index.html">TED 0.051 documentation</a> &raquo;</li>
+          <li><a href="machines.html" >Time Encoding and Decoding Machines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2011, Lev Givon and Yiyin Zhou.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+    </div>
+  </body>
+</html>
