@@ -6,13 +6,13 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installation Instructions &mdash; TED 0.051 documentation</title>
+    <title>Installation Instructions &mdash; TED 0.06 documentation</title>
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '#',
-        VERSION:     '0.051',
+        VERSION:     '0.06',
         COLLAPSE_MODINDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="TED 0.051 documentation" href="index.html" />
+    <link rel="top" title="TED 0.06 documentation" href="index.html" />
     <link rel="next" title="Time Encoding and Decoding Machines" href="machines.html" />
     <link rel="prev" title="Time Encoding and Decoding Toolbox" href="index.html" /> 
   </head>
@@ -38,7 +38,7 @@
         <li class="right" >
           <a href="index.html" title="Time Encoding and Decoding Toolbox"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">TED 0.051 documentation</a> &raquo;</li> 
+        <li><a href="index.html">TED 0.06 documentation</a> &raquo;</li> 
       </ul>
     </div> 
       <div class="sphinxsidebar">
@@ -82,14 +82,9 @@
 <h1>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
-<p>The Time Encoding and Decoding Toolbox requires several software
-packages to be present in order to be installed (newer versions of
-these packages may also work).</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.mathworks.com/">MATLAB R14</a></li>
-<li><a class="reference external" href="http://bionet.github.com/">Bionet MATLAB Utilities 0.016</a></li>
-</ul>
-<p>To build the documentation, the following Python packages are also
+<p>The Time Encoding and Decoding Toolbox requires a relatively recent version of
+MATLAB (e.g., R14 or later) to run.</p>
+<p>To rebuild the documentation, the following Python packages are also
 required:</p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net">Docutils</a> 0.5 or later.</li>
@@ -108,22 +103,26 @@ administrative access to the machine.</p>
 <p>Add the subdirectories of the installation directory to Matlab&#8217;s
 search path so that the functions comprised by the toolbox may be
 easily accessed. For example, if the software is installed in
-<tt class="docutils literal"><span class="pre">$MATLAB/toolbox/ted</span></tt>, one may add the following lines to the list of
+<tt class="docutils literal"><span class="pre">$MATLAB/toolbox</span></tt>, one may add the following lines to the list of
 paths in <tt class="docutils literal"><span class="pre">$MATLAB/toolbox/local/pathdef.m</span></tt> and restart Matlab to make
 the toolbox contents available:</p>
 <blockquote>
 <div>matlabroot,&#8217;/toolbox/ted/ted:&#8217;, ...
-matlabroot,&#8217;/toolbox/ted/teddemos:&#8217;, ...</div></blockquote>
+matlabroot,&#8217;/toolbox/ted/teddemos:&#8217;, ...
+matlabroot,&#8217;/toolbox/utils/utils:&#8217;, ...
+matlabroot,&#8217;/toolbox/utilsdemos:&#8217;, ...</div></blockquote>
 <p>Alternatively, one may also add the path to the toolbox for the
 duration of one session by running the commands</p>
 <blockquote>
 <div>addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/ted&#8217;));
-addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/teddemos&#8217;));</div></blockquote>
+addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/teddemos&#8217;));
+addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/utils/utils&#8217;));
+addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/utils/utilsdemos&#8217;));</div></blockquote>
 <p>To rebuild the documentation, run:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">make</span>
 </pre></div>
 </div>
-<p>from within the <tt class="docutils literal"><span class="pre">doc/</span></tt> subdirectory and follow the directions.</p>
+<p>from within the <tt class="docutils literal"><span class="pre">docs/</span></tt> subdirectory and follow the directions.</p>
 </div>
 </div>
 
@@ -145,7 +144,7 @@ addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/teddemos&#8217;)
         <li class="right" >
           <a href="index.html" title="Time Encoding and Decoding Toolbox"
              >previous</a> |</li>
-        <li><a href="index.html">TED 0.051 documentation</a> &raquo;</li> 
+        <li><a href="index.html">TED 0.06 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

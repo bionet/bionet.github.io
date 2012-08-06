@@ -3,10 +3,14 @@
 Change Log
 ==========
 
-Release 0.051 - ()
-------------------
-* Move various auxiliary functions to utils toolbox.
+Release 0.061 - (August 6, 2012)
+--------------------------------
+* Documentation build bugfix.
+
+Release 0.06 - (August 6, 2012)
+-------------------------------
 * Add documentation.
+* Merge with utils toolbox.
 
 Release 0.05 - (April 28, 2011)
 -------------------------------
