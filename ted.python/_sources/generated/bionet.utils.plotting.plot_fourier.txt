@@ -1,0 +1,6 @@
+bionet.utils.plotting.plot_fourier
+==================================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: plot_fourier

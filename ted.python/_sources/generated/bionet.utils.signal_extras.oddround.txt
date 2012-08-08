@@ -1,0 +1,6 @@
+bionet.utils.signal_extras.oddround
+===================================
+
+.. currentmodule:: bionet.utils.signal_extras
+
+.. autofunction:: oddround

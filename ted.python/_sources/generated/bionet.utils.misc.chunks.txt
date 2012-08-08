@@ -1,0 +1,6 @@
+bionet.utils.misc.chunks
+========================
+
+.. currentmodule:: bionet.utils.misc
+
+.. autofunction:: chunks

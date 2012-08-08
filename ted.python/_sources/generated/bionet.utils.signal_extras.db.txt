@@ -1,0 +1,6 @@
+bionet.utils.signal_extras.db
+=============================
+
+.. currentmodule:: bionet.utils.signal_extras
+
+.. autofunction:: db

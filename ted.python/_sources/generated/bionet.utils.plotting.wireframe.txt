@@ -1,0 +1,6 @@
+bionet.utils.plotting.wireframe
+===============================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: wireframe

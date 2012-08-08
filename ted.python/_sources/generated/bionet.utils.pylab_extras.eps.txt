@@ -1,0 +1,6 @@
+bionet.utils.pylab_extras.eps
+=============================
+
+.. currentmodule:: bionet.utils.pylab_extras
+
+.. autofunction:: eps

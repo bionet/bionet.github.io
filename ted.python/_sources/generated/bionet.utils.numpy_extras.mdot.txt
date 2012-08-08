@@ -1,0 +1,6 @@
+bionet.utils.numpy_extras.mdot
+==============================
+
+.. currentmodule:: bionet.utils.numpy_extras
+
+.. autofunction:: mdot

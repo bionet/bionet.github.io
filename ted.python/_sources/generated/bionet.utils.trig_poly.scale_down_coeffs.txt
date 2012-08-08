@@ -1,0 +1,6 @@
+bionet.utils.trig_poly.scale_down_coeffs
+========================================
+
+.. currentmodule:: bionet.utils.trig_poly
+
+.. autofunction:: scale_down_coeffs

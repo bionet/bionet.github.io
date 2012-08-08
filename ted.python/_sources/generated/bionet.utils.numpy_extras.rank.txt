@@ -1,0 +1,6 @@
+bionet.utils.numpy_extras.rank
+==============================
+
+.. currentmodule:: bionet.utils.numpy_extras
+
+.. autofunction:: rank

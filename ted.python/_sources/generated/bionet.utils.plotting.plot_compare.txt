@@ -1,0 +1,6 @@
+bionet.utils.plotting.plot_compare
+==================================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: plot_compare

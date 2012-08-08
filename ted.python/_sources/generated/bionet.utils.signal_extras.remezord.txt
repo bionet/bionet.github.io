@@ -1,0 +1,6 @@
+bionet.utils.signal_extras.remezord
+===================================
+
+.. currentmodule:: bionet.utils.signal_extras
+
+.. autofunction:: remezord

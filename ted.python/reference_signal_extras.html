@@ -1,0 +1,184 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Extra Signal Processing Routines &mdash; TED 0.07 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '#',
+        VERSION:     '0.07',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TED 0.07 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="bionet.utils.signal_extras.db" href="generated/bionet.utils.signal_extras.db.html" />
+    <link rel="prev" title="bionet.utils.scipy_extras.shi" href="generated/bionet.utils.scipy_extras.shi.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="generated/bionet.utils.signal_extras.db.html" title="bionet.utils.signal_extras.db"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="generated/bionet.utils.scipy_extras.shi.html" title="bionet.utils.scipy_extras.shi"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Extra Signal Processing Routines</a><ul>
+<li><a class="reference internal" href="#error-analysis-routines">Error Analysis Routines</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#filtering-routines">Filtering Routines</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#miscellaneous-routines">Miscellaneous Routines</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/reference_signal_extras.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="extra-signal-processing-routines">
+<h1>Extra Signal Processing Routines<a class="headerlink" href="#extra-signal-processing-routines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="error-analysis-routines">
+<h2>Error Analysis Routines<a class="headerlink" href="#error-analysis-routines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.db.html#bionet.utils.signal_extras.db" title="bionet.utils.signal_extras.db"><tt class="xref py py-obj docutils literal"><span class="pre">db</span></tt></a></td>
+<td>Convert the specified power value to decibels assuming a</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.rms.html#bionet.utils.signal_extras.rms" title="bionet.utils.signal_extras.rms"><tt class="xref py py-obj docutils literal"><span class="pre">rms</span></tt></a></td>
+<td>Compute the root mean squared value of the specified array x.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.snr.html#bionet.utils.signal_extras.snr" title="bionet.utils.signal_extras.snr"><tt class="xref py py-obj docutils literal"><span class="pre">snr</span></tt></a></td>
+<td>Compute the signal-to-noise ratio (in dB) of a signal given its</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filtering-routines">
+<h2>Filtering Routines<a class="headerlink" href="#filtering-routines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.downsample.html#bionet.utils.signal_extras.downsample" title="bionet.utils.signal_extras.downsample"><tt class="xref py py-obj docutils literal"><span class="pre">downsample</span></tt></a></td>
+<td>Downsample a vector x by returning every nth entry.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.fftfilt.html#bionet.utils.signal_extras.fftfilt" title="bionet.utils.signal_extras.fftfilt"><tt class="xref py py-obj docutils literal"><span class="pre">fftfilt</span></tt></a></td>
+<td>Filter the signal x with the FIR filter described by the</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.remezord.html#bionet.utils.signal_extras.remezord" title="bionet.utils.signal_extras.remezord"><tt class="xref py py-obj docutils literal"><span class="pre">remezord</span></tt></a></td>
+<td>Calculate the parameters required by the Remez exchange algorithm to</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.upsample.html#bionet.utils.signal_extras.upsample" title="bionet.utils.signal_extras.upsample"><tt class="xref py py-obj docutils literal"><span class="pre">upsample</span></tt></a></td>
+<td>Upsample a vector x by inserting n-1 zeros between every entry.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="miscellaneous-routines">
+<h2>Miscellaneous Routines<a class="headerlink" href="#miscellaneous-routines" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.nextpow2.html#bionet.utils.signal_extras.nextpow2" title="bionet.utils.signal_extras.nextpow2"><tt class="xref py py-obj docutils literal"><span class="pre">nextpow2</span></tt></a></td>
+<td>Return the first integer N such that 2**N &gt;= abs(x)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.oddceil.html#bionet.utils.signal_extras.oddceil" title="bionet.utils.signal_extras.oddceil"><tt class="xref py py-obj docutils literal"><span class="pre">oddceil</span></tt></a></td>
+<td>Return the smallest odd integer no less than x.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.oddround.html#bionet.utils.signal_extras.oddround" title="bionet.utils.signal_extras.oddround"><tt class="xref py py-obj docutils literal"><span class="pre">oddround</span></tt></a></td>
+<td>Return the nearest odd integer from x.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="generated/bionet.utils.signal_extras.db.html" title="bionet.utils.signal_extras.db"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="generated/bionet.utils.scipy_extras.shi.html" title="bionet.utils.scipy_extras.shi"
+             >previous</a> |</li>
+        <li><a href="index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2012, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

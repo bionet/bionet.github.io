@@ -1,0 +1,6 @@
+bionet.utils.plotting.plot_signal
+=================================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: plot_signal

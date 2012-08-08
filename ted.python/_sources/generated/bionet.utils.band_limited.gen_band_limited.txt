@@ -1,0 +1,6 @@
+bionet.utils.band_limited.gen_band_limited
+==========================================
+
+.. currentmodule:: bionet.utils.band_limited
+
+.. autofunction:: gen_band_limited

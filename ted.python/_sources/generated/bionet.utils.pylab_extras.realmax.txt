@@ -1,0 +1,6 @@
+bionet.utils.pylab_extras.realmax
+=================================
+
+.. currentmodule:: bionet.utils.pylab_extras
+
+.. autofunction:: realmax

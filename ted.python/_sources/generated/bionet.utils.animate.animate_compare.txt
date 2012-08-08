@@ -1,0 +1,6 @@
+bionet.utils.animate.animate_compare
+====================================
+
+.. currentmodule:: bionet.utils.animate
+
+.. autofunction:: animate_compare

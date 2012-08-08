@@ -1,0 +1,6 @@
+bionet.utils.misc.func_timer
+============================
+
+.. currentmodule:: bionet.utils.misc
+
+.. autofunction:: func_timer

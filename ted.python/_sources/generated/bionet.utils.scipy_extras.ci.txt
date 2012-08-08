@@ -1,0 +1,6 @@
+bionet.utils.scipy_extras.ci
+============================
+
+.. currentmodule:: bionet.utils.scipy_extras
+
+.. autofunction:: ci

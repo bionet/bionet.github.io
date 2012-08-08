@@ -1,0 +1,6 @@
+bionet.utils.numpy_extras.hilb
+==============================
+
+.. currentmodule:: bionet.utils.numpy_extras
+
+.. autofunction:: hilb

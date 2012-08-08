@@ -1,0 +1,6 @@
+bionet.utils.animate.animate2
+=============================
+
+.. currentmodule:: bionet.utils.animate
+
+.. autofunction:: animate2

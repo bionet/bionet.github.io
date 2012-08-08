@@ -1,0 +1,6 @@
+bionet.utils.signal_extras.snr
+==============================
+
+.. currentmodule:: bionet.utils.signal_extras
+
+.. autofunction:: snr

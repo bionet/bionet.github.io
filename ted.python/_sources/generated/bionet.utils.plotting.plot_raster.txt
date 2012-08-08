@@ -1,0 +1,6 @@
+bionet.utils.plotting.plot_raster
+=================================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: plot_raster

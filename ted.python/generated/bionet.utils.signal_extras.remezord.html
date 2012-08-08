@@ -1,0 +1,164 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.utils.signal_extras.remezord &mdash; TED 0.07 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.07',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED 0.07 documentation" href="../index.html" />
+    <link rel="up" title="Extra Signal Processing Routines" href="../reference_signal_extras.html" />
+    <link rel="next" title="bionet.utils.signal_extras.upsample" href="bionet.utils.signal_extras.upsample.html" />
+    <link rel="prev" title="bionet.utils.signal_extras.fftfilt" href="bionet.utils.signal_extras.fftfilt.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bionet.utils.signal_extras.upsample.html" title="bionet.utils.signal_extras.upsample"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.utils.signal_extras.fftfilt.html" title="bionet.utils.signal_extras.fftfilt"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_signal_extras.html" accesskey="U">Extra Signal Processing Routines</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.utils.signal_extras.remezord.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-utils-signal-extras-remezord">
+<h1>bionet.utils.signal_extras.remezord<a class="headerlink" href="#bionet-utils-signal-extras-remezord" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.utils.signal_extras.remezord">
+<tt class="descclassname">bionet.utils.signal_extras.</tt><tt class="descname">remezord</tt><big>(</big><em>freqs</em>, <em>amps</em>, <em>rips</em>, <em>Hz=1</em>, <em>alg='ichige'</em><big>)</big><a class="headerlink" href="#bionet.utils.signal_extras.remezord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the parameters required by the Remez exchange algorithm to
+construct a finite impulse response (FIR) filter that approximately
+meets the specified design.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>freqs</strong> : array_like of floats</p>
+<blockquote>
+<div><p>A monotonic sequence of band edges specified in Hertz. All
+elements must be non-negative and less than 1/2 the
+sampling frequency as given by the Hz parameter.</p>
+</div></blockquote>
+<p><strong>amps</strong> : array_like of floats</p>
+<blockquote>
+<div><p>A sequence containing the amplitudes of the signal to be
+filtered over the various bands.</p>
+</div></blockquote>
+<p><strong>rips</strong> : array_like of floats</p>
+<blockquote>
+<div><p>A sequence specifying the maximum ripples of each band.</p>
+</div></blockquote>
+<p><strong>alg</strong> : {&#8216;herrmann&#8217;, &#8216;kaiser&#8217;, &#8216;ichige&#8217;}</p>
+<blockquote>
+<div><p>Filter length approximation algorithm.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>numtaps</strong> : int</p>
+<blockquote>
+<div><p>Desired number of filter taps.</p>
+</div></blockquote>
+<p><strong>bands</strong> : ndarray of floats</p>
+<blockquote>
+<div><p>A monotonic sequence containing the band edges.</p>
+</div></blockquote>
+<p><strong>amps</strong> : ndarray of floats</p>
+<blockquote>
+<div><p>Desired gain for each band region.</p>
+</div></blockquote>
+<p><strong>weights</strong> : ndarray of floats</p>
+<blockquote class="last">
+<div><p>Filter design weights.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><tt class="xref py py-obj docutils literal"><span class="pre">scipy.signal.remez</span></tt></p>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bionet.utils.signal_extras.upsample.html" title="bionet.utils.signal_extras.upsample"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.utils.signal_extras.fftfilt.html" title="bionet.utils.signal_extras.fftfilt"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_signal_extras.html" >Extra Signal Processing Routines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2012, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

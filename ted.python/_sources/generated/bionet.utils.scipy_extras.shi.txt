@@ -1,0 +1,6 @@
+bionet.utils.scipy_extras.shi
+=============================
+
+.. currentmodule:: bionet.utils.scipy_extras
+
+.. autofunction:: shi

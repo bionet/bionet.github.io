@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bionet.utils.trig_poly.gen_trig_poly_2d &mdash; TED 0.07 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.07',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="TED 0.07 documentation" href="../index.html" />
+    <link rel="up" title="Trigonometric Polynomial Routines" href="../reference_trig_poly.html" />
+    <link rel="next" title="bionet.utils.trig_poly.get_dirichlet_coeffs" href="bionet.utils.trig_poly.get_dirichlet_coeffs.html" />
+    <link rel="prev" title="bionet.utils.trig_poly.gen_trig_poly" href="bionet.utils.trig_poly.gen_trig_poly.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bionet.utils.trig_poly.get_dirichlet_coeffs.html" title="bionet.utils.trig_poly.get_dirichlet_coeffs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bionet.utils.trig_poly.gen_trig_poly.html" title="bionet.utils.trig_poly.gen_trig_poly"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_trig_poly.html" accesskey="U">Trigonometric Polynomial Routines</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/generated/bionet.utils.trig_poly.gen_trig_poly_2d.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bionet-utils-trig-poly-gen-trig-poly-2d">
+<h1>bionet.utils.trig_poly.gen_trig_poly_2d<a class="headerlink" href="#bionet-utils-trig-poly-gen-trig-poly-2d" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="bionet.utils.trig_poly.gen_trig_poly_2d">
+<tt class="descclassname">bionet.utils.trig_poly.</tt><tt class="descname">gen_trig_poly_2d</tt><big>(</big><em>Sx</em>, <em>Sy</em>, <em>dx</em>, <em>dy</em>, <em>c</em><big>)</big><a class="headerlink" href="#bionet.utils.trig_poly.gen_trig_poly_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Construct a 2D trigonometric polynomial.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>Sx</strong> : float</p>
+<blockquote>
+<div><p>Period of signal along the X-axis.</p>
+</div></blockquote>
+<p><strong>Sy</strong> : float</p>
+<blockquote>
+<div><p>Period of signal along the Y-axis.</p>
+</div></blockquote>
+<p><strong>dx</strong> : float</p>
+<blockquote>
+<div><p>Resolution along the X-axis.</p>
+</div></blockquote>
+<p><strong>dy</strong> : float</p>
+<blockquote>
+<div><p>Resolution along the Y-axis.</p>
+</div></blockquote>
+<p><strong>c</strong> : tuple or numpy.ndarray</p>
+<blockquote>
+<div><p>X-axis and Y-axis trigonometric polynomial orders or
+an array of Dirichlet coefficients with shape <cite>(2*My+1, 2*Mx+1)</cite>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>S</strong> : numpy.ndarray</p>
+<blockquote class="last">
+<div><p>Generated signal.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>This function uses the FFT to generate the output signal.</p>
+<p>See <a class="reference external" href="http://fourier.eng.hmc.edu/e101/lectures/Image_Processing/node6.html">http://fourier.eng.hmc.edu/e101/lectures/Image_Processing/node6.html</a>
+for an example of a DFT of a real 2D discrete signal.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bionet.utils.trig_poly.get_dirichlet_coeffs.html" title="bionet.utils.trig_poly.get_dirichlet_coeffs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bionet.utils.trig_poly.gen_trig_poly.html" title="bionet.utils.trig_poly.gen_trig_poly"
+             >previous</a> |</li>
+        <li><a href="../index.html">TED 0.07 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_trig_poly.html" >Trigonometric Polynomial Routines</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009-2012, Lev Givon.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

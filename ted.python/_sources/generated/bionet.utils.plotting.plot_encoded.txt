@@ -1,0 +1,6 @@
+bionet.utils.plotting.plot_encoded
+==================================
+
+.. currentmodule:: bionet.utils.plotting
+
+.. autofunction:: plot_encoded
