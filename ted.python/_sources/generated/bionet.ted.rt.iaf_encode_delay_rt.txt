@@ -1,6 +1,0 @@
-bionet.ted.rt.iaf_encode_delay_rt
-=================================
-
-.. currentmodule:: bionet.ted.rt
-
-.. autofunction:: iaf_encode_delay_rt
