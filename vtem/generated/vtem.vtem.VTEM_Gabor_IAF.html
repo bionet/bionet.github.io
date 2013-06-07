@@ -1,0 +1,222 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>vtem.vtem.VTEM_Gabor_IAF &mdash; Video Time Encoding and Decoding Machines 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Video Time Encoding and Decoding Machines 0.1.1 documentation" href="../index.html" />
+    <link rel="up" title="vtem.vtem" href="../reference_vtem.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vtem.vtem.VTEM_CS_IAF.html" title="vtem.vtem.VTEM_CS_IAF"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vtem.vtem.VTEM_IAF.html" title="vtem.vtem.VTEM_IAF"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Video Time Encoding and Decoding Machines 0.1.1 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_vtem.html" accesskey="U">vtem.vtem</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/generated/vtem.vtem.VTEM_Gabor_IAF.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vtem-vtem-vtem-gabor-iaf">
+<h1>vtem.vtem.VTEM_Gabor_IAF<a class="headerlink" href="#vtem-vtem-vtem-gabor-iaf" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
+<dt id="vtem.vtem.VTEM_Gabor_IAF">
+<tt class="descclassname">vtem.vtem.</tt><tt class="descname">VTEM_Gabor_IAF</tt><em class="property"> = &lt;function VTEM_Gabor_IAF at 0x474bc80&gt;</em><a class="headerlink" href="#vtem.vtem.VTEM_Gabor_IAF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encode a video with IAF neurons and gabor receptive field
+with default parameters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>videofile</strong> : string</p>
+<blockquote>
+<div><div class="highlight-python"><pre>Either
+1. Filename of a file containing the input video
+must be stored using write_memory_to_file in simpleio.py
+or using h5write in matlab
+Video array with shape (a,b,c)
+a: total number of frames
+b: number of pixels in y direction
+c: number of pixels in x direction
+c is the leading dimension
+in matlab should be (c,b,a)
+2. Or filename of a video file if h5input is set to False. 
+Will throw an error if OpenCV and the required codec are
+not installed         </pre>
+</div>
+</div></blockquote>
+<p><strong>output_filename</strong> : string</p>
+<blockquote>
+<div><p>output filename that will contain the spike info</p>
+</div></blockquote>
+<p><strong>Wt</strong> : float</p>
+<blockquote>
+<div><p>bandwidth in t variable
+if not specified, will use the info in spikefile</p>
+</div></blockquote>
+<p><strong>Wx</strong> : float, optional</p>
+<blockquote>
+<div><p>bandwidth in x variable
+if not specified, will use the info in spikefile</p>
+</div></blockquote>
+<p><strong>Wy</strong> : float, optional</p>
+<blockquote>
+<div><p>bandwidth in y variable
+if not specified, will use the info in spikefile</p>
+</div></blockquote>
+<p><strong>start_frame</strong> : integer, optional</p>
+<blockquote>
+<div><p>starting frame to be encoded in the video</p>
+</div></blockquote>
+<p><strong>end_frame</strong> : integer, optional</p>
+<blockquote>
+<div><p>ending frame to be encoded
+if not specified, will encoding to the end of the video</p>
+</div></blockquote>
+<p><strong>dx</strong> : integer, optional</p>
+<blockquote>
+<div><p>spatial resolution in x direction, distance between two pixels</p>
+</div></blockquote>
+<p><strong>dy: integer, optional</strong> :</p>
+<blockquote>
+<div><p>spatial resolution in y direction, distance between two pixels</p>
+</div></blockquote>
+<p><strong>fps</strong> : integer, optional</p>
+<blockquote>
+<div><p>frames per second of the video</p>
+</div></blockquote>
+<p><strong>domain</strong> : list, optional</p>
+<blockquote>
+<div><p>list of 2, [a,b], specifying the domain to encode
+a in x direction, b in y direction
+will only encode the center of the video with size [a,b]
+if not specified, the whole video screen will be encoded.</p>
+</div></blockquote>
+<p><strong>h5input</strong> : bool, optional</p>
+<blockquote class="last">
+<div><p>True if the file specified is an h5 file.
+False if the file specified is a video file.
+If not specified, is set to True</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The coordinate system is given by the following</p>
+<div class="highlight-python"><pre>Row (width / X) major
+
+-----------------------------------------&gt; width
+|   Y
+|   ^--------------------&gt;
+|   |--------------------&gt;
+|   |--------------------&gt;
+|   |--------------------&gt; X
+| 
+|
+v
+height</pre>
+</div>
+<p>To specify receptive field parameters, create an object using
+vrf.vrf_gabor() with desired parameters and use function
+VTEM_IAF</p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">atexit</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pycuda.driver</span> <span class="kn">as</span> <span class="nn">cuda</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">vtem</span> <span class="kn">import</span> <span class="n">vtem</span><span class="p">,</span><span class="n">vtdm</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cuda</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">context1</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">Device</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">make_context</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">cuda</span><span class="o">.</span><span class="n">Context</span><span class="o">.</span><span class="n">pop</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">vtem</span><span class="o">.</span><span class="n">VTEM_Gabor_IAF</span><span class="p">(</span><span class="s">&#39;video.h5&#39;</span><span class="p">,</span> <span class="s">&#39;spikes.h5&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vtem.vtem.VTEM_CS_IAF.html" title="vtem.vtem.VTEM_CS_IAF"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vtem.vtem.VTEM_IAF.html" title="vtem.vtem.VTEM_IAF"
+             >previous</a> |</li>
+        <li><a href="../index.html">Video Time Encoding and Decoding Machines 0.1.1 documentation</a> &raquo;</li>
+          <li><a href="../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../reference_vtem.html" >vtem.vtem</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Nikul H. Ukani, Yiyin Zhou.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

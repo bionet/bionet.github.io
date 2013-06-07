@@ -1,0 +1,6 @@
+vtem.vtem.VTEM_Gabor_IAF
+========================
+
+.. currentmodule:: vtem.vtem
+
+.. autodata:: VTEM_Gabor_IAF

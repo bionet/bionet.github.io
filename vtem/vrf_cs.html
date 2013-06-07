@@ -1,0 +1,430 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>vrf_cs &mdash; Video Time Encoding and Decoding Machines 0.1.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Video Time Encoding and Decoding Machines 0.1.1 documentation" href="index.html" />
+    <link rel="up" title="vtem.vrf" href="reference_vrf.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="authors.html" title="Authors &amp; Acknowledgments"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vrf_gabor.html" title="vrf_gabor"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Video Time Encoding and Decoding Machines 0.1.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="reference_vrf.html" accesskey="U">vtem.vrf</a> &raquo;</li> 
+      </ul>
+    </div> 
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/vrf_cs.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div> 
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vrf-cs">
+<h1>vrf_cs<a class="headerlink" href="#vrf-cs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="vtem.vrf.vrf_cs">
+<em class="property">class </em><tt class="descclassname">vtem.vrf.</tt><tt class="descname">vrf_cs</tt><big>(</big><em>shape</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em>, <em>dx=0.0625</em>, <em>dy=0.0625</em>, <em>scale=1</em>, <em>domain=None</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Centre Surround RFs</p>
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>shape</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em>, <em>dx=0.0625</em>, <em>dy=0.0625</em>, <em>scale=1</em>, <em>domain=None</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>shape</strong> : list</p>
+<blockquote>
+<div><p>2-tuple indicating the shape (number of pixels in (height,width) / (y,x) ) of RF</p>
+</div></blockquote>
+<p><strong>dtype</strong> : type, optional</p>
+<blockquote>
+<div><p>numpy dtype to use for RF calculations.
+If not specified , will default to np.float64</p>
+</div></blockquote>
+<p><strong>dx</strong> : float</p>
+<blockquote>
+<div><p>spatial resolution in x direction, distance between two pixels</p>
+</div></blockquote>
+<p><strong>dy: float</strong> :</p>
+<blockquote>
+<div><p>spatial resolution in y direction, distance between two pixels</p>
+</div></blockquote>
+<p><strong>scale</strong> : float</p>
+<blockquote>
+<div><p>scale up the shape by scale and scale down dx,dy by scale
+effectively increase the resoltuion of the RFs</p>
+</div></blockquote>
+<p><strong>domain</strong> : list</p>
+<blockquote class="last">
+<div><p>list of 2, [a,b], specifying the domain to cover RFs
+in default parameter settings
+a in x direction, b in y direction</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The coordinate system is given by the following:</p>
+<div class="highlight-python"><pre>row (width / X) major
+
+-----------------------------------------&gt; width
+|   Y
+|   ^--------------------&gt;
+|   |--------------------&gt;
+|   |--------------------&gt;
+|   |--------------------&gt; X
+| 
+|
+v
+height</pre>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.compute_Ds">
+<tt class="descname">compute_Ds</tt><big>(</big><em>Mx</em>, <em>My</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.compute_Ds" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>Mx</strong> : integer</p>
+<blockquote>
+<div><p>Order in the x dimension</p>
+</div></blockquote>
+<p><strong>My</strong> : integer</p>
+<blockquote>
+<div><p>Order in the y dimension</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>The dirichlet coefficients of all gabor filters with order Mx, My</strong> :</p>
+<p class="last"><strong>in the format of PitchArray with shape (num_neurons, 2*Mx+1, 2*My+1)</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.compute_Dsw">
+<tt class="descname">compute_Dsw</tt><big>(</big><em>d_Ds</em>, <em>Mx</em>, <em>My</em>, <em>h_norm</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.compute_Dsw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the weighting matrix of the &#8220;correlation&#8221; between each two RFs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>d_Ds</strong> : PitchArray</p>
+<blockquote>
+<div><p>containing dirichlet coefficient most possibly created by compute_Ds</p>
+</div></blockquote>
+<p><strong>Mx</strong> : integer</p>
+<blockquote>
+<div><p>order in the x direction</p>
+</div></blockquote>
+<p><strong>My</strong> : integer</p>
+<blockquote>
+<div><p>order in the y direction</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first last"><strong>PitchArray with shape (num_neurons, num_neurons)</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.compute_dirich_space">
+<tt class="descname">compute_dirich_space</tt><big>(</big><em>d_Ds</em>, <em>Mx</em>, <em>My</em>, <em>Px</em>, <em>Py</em>, <em>Sx</em>, <em>Sy</em>, <em>Wx</em>, <em>Wy</em>, <em>x_start=None</em>, <em>y_start=None</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.compute_dirich_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the spatial reconstruction functions</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>d_Ds</strong> : PitchArray</p>
+<blockquote>
+<div><p>containing dirichlet coefficient most possibly created by compute_Ds</p>
+</div></blockquote>
+<p><strong>Mx</strong> : integer</p>
+<blockquote>
+<div><p>Order in the x direction</p>
+</div></blockquote>
+<p><strong>My</strong> : integer</p>
+<blockquote>
+<div><p>Order in the y direction</p>
+</div></blockquote>
+<p><strong>Px</strong> : integer</p>
+<blockquote>
+<div><p>number of pixels in reconstruction functions in x direction</p>
+</div></blockquote>
+<p><strong>Py</strong> : integer</p>
+<blockquote>
+<div><p>number of pixels in reconstruction functions in y direction</p>
+</div></blockquote>
+<p><strong>Sx</strong> : float</p>
+<blockquote>
+<div><p>spatial domain in degree of reconstruction functions in x direction</p>
+</div></blockquote>
+<p><strong>Sy</strong> : float</p>
+<blockquote>
+<div><p>spatial domain in degree of reconstruction functions in y direction</p>
+</div></blockquote>
+<p><strong>Wx</strong> : float</p>
+<blockquote>
+<div><p>spatial bandwidth in x direction</p>
+</div></blockquote>
+<p><strong>Wy</strong> : float</p>
+<blockquote>
+<div><p>spatial bandwidth in y direction</p>
+</div></blockquote>
+<p><strong>x_start</strong> : float, optional</p>
+<blockquote>
+<div><p>indicating the starting degree in x direction</p>
+</div></blockquote>
+<p><strong>y_start</strong> : float, optional</p>
+<blockquote>
+<div><p>indicating the starting degree in y direction</p>
+</div></blockquote>
+<p class="last"><strong>output: PitchArray with shape (num_neurons, Px, Py)</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.filter">
+<tt class="descname">filter</tt><big>(</big><em>V</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter a video V
+Must set up parameters of CS RF first</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>V</strong> : 3D ndarray, with shape (num_frames, Px, Py)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns :</th><td class="field-body"><p class="first"><strong>the filtered output by the gabor filters specified in self</strong> :</p>
+<p><strong>output is a PitchArray with shape (num_neurons, num_frames),</strong> :</p>
+<p class="last"><strong>jth row of which is the output of jth gabor filter</strong> :</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.generate_visual_receptive_fields">
+<tt class="descname">generate_visual_receptive_fields</tt><big>(</big><em>startbias=0</em>, <em>N_filters=None</em>, <em>x_start=None</em>, <em>y_start=None</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.generate_visual_receptive_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a batch of centre surround filters from parameters set in self</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>start_bias</strong> : integer, optional</p>
+<blockquote>
+<div><p>start the the (start_bias)th filter</p>
+</div></blockquote>
+<p><strong>N_filters</strong> : integer, optional</p>
+<blockquote>
+<div><p>generate N_filters filters</p>
+</div></blockquote>
+<p><strong>x_start</strong> : float</p>
+<blockquote>
+<div><p>indicating the starting degree in x direction</p>
+</div></blockquote>
+<p><strong>y_start</strong> : float</p>
+<blockquote class="last">
+<div><p>indicating the starting degree in y direction</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.get_cs_parameters">
+<tt class="descname">get_cs_parameters</tt><big>(</big><em>dilations=[1, 0, -1, -2, -3], alpha0=2.0, b0=1.0, b0scalebase=1.0, sigma_center=0.5, sigma_surround=0.8</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.get_cs_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a set of parameters for a family of Centre Surround filters</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>dilation</strong> : list, optional</p>
+<blockquote>
+<div><p>a list containing the dilation parameter m</p>
+</div></blockquote>
+<p><strong>num_rotations</strong> : list, optional</p>
+<blockquote>
+<div><p>number of rotations of each (dilation, translation_x, translation_y) pair</p>
+</div></blockquote>
+<p><strong>alpha0</strong> : np.float64, optional</p>
+<blockquote>
+<div><p>base factor of dilation</p>
+</div></blockquote>
+<p><strong>b0</strong> : np.float64, optional</p>
+<blockquote>
+<div><p>base factor of translation</p>
+</div></blockquote>
+<p><strong>b0scalebase</strong> : np.float64, optional</p>
+<blockquote>
+<div><p>effective translation in each dilation will be
+b0 * (alpha0**dilations[i]) * b0scalebase**(-dilations[i])</p>
+</div></blockquote>
+<p><strong>sigma_center</strong> : float, optional</p>
+<blockquote>
+<div><p>standard deviation of the center</p>
+</div></blockquote>
+<p><strong>sigma_surround</strong> : float, optional</p>
+<blockquote class="last">
+<div><p>standard deviation of the surround</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="vtem.vrf.vrf_cs.load_parameters">
+<tt class="descname">load_parameters</tt><big>(</big><em>num_neurons=None</em>, <em>h_alpha=None</em>, <em>h_x0=None</em>, <em>h_y0=None</em>, <em>set=0</em>, <em>sigma_center=0.5</em>, <em>sigma_surround=0.8</em><big>)</big><a class="headerlink" href="#vtem.vrf.vrf_cs.load_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Centre Surround parameters to GPU</p>
+<p>num_neurons, h_alpha, h_l, h_x0, h_y0, h_ab must be specified together
+or unspecified together</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters :</th><td class="field-body"><p class="first"><strong>num_neurons</strong> : integer</p>
+<blockquote>
+<div><p>total number of neurons</p>
+</div></blockquote>
+<p><strong>h_alpha</strong> : ndarray of float64</p>
+<blockquote>
+<div><p>containing dilation parameters alpha = alpha0**(m)</p>
+</div></blockquote>
+<p><strong>h_l</strong> : ndarray of float64</p>
+<blockquote>
+<div><p>containing rotation parameters l (angles)</p>
+</div></blockquote>
+<p><strong>h_x0</strong> : ndarray of float64</p>
+<blockquote>
+<div><p>containing translation parameters x0</p>
+</div></blockquote>
+<p><strong>h_y0</strong> : ndarray of float64</p>
+<blockquote>
+<div><p>containing translation parameters y0</p>
+</div></blockquote>
+<p><strong>h_ab</strong> : ndarray of int32</p>
+<blockquote>
+<div><p>containing 0 or 1, 0 for real part, 1 for imaginary part
+jth gabor filter will be generated according to h_alpha[j], h_l[j], h_n[j], h_k[j] and h_ab[j]</p>
+</div></blockquote>
+<p><strong>set</strong> : integer</p>
+<blockquote>
+<div><p>0 if self parameters has not been set, 1 if they have been set by get_gabor_parameters or other manner)</p>
+</div></blockquote>
+<p><strong>sigma_center</strong> : float, optional</p>
+<blockquote>
+<div><p>standard deviation of the center</p>
+</div></blockquote>
+<p><strong>sigma_surround</strong> : float, optional</p>
+<blockquote class="last">
+<div><p>standard deviation of the surround</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="authors.html" title="Authors &amp; Acknowledgments"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="vrf_gabor.html" title="vrf_gabor"
+             >previous</a> |</li>
+        <li><a href="index.html">Video Time Encoding and Decoding Machines 0.1.1 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="reference_vrf.html" >vtem.vrf</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Nikul H. Ukani, Yiyin Zhou.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

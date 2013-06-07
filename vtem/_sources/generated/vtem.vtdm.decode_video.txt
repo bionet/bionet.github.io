@@ -1,0 +1,6 @@
+vtem.vtdm.decode_video
+======================
+
+.. currentmodule:: vtem.vtdm
+
+.. autodata:: decode_video

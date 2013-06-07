@@ -1,0 +1,6 @@
+vtem.vtem.VTEM_IAF
+==================
+
+.. currentmodule:: vtem.vtem
+
+.. autodata:: VTEM_IAF
