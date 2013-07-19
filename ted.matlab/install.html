@@ -157,18 +157,20 @@ easily accessed. For example, if the software is installed in
 <tt class="docutils literal"><span class="pre">$MATLAB/toolbox</span></tt>, one may add the following lines to the list of
 paths in <tt class="docutils literal"><span class="pre">$MATLAB/toolbox/local/pathdef.m</span></tt> and restart Matlab to make
 the toolbox contents available:</p>
-<blockquote>
-<div>matlabroot,&#8217;/toolbox/ted/ted:&#8217;, ...
-matlabroot,&#8217;/toolbox/ted/teddemos:&#8217;, ...
-matlabroot,&#8217;/toolbox/utils/utils:&#8217;, ...
-matlabroot,&#8217;/toolbox/utilsdemos:&#8217;, ...</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">matlabroot</span><span class="p">,</span><span class="s">&#39;/toolbox/ted/ted:&#39;</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">matlabroot</span><span class="p">,</span><span class="s">&#39;/toolbox/ted/teddemos:&#39;</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">matlabroot</span><span class="p">,</span><span class="s">&#39;/toolbox/utils/utils:&#39;</span><span class="p">,</span> <span class="o">...</span>
+<span class="n">matlabroot</span><span class="p">,</span><span class="s">&#39;/toolbox/utilsdemos:&#39;</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
 <p>Alternatively, one may also add the path to the toolbox for the
 duration of one session by running the commands</p>
-<blockquote>
-<div>addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/ted&#8217;));
-addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/ted/teddemos&#8217;));
-addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/utils/utils&#8217;));
-addpath(strcat(getenv(&#8216;MATLAB&#8217;),&#8217;/toolbox/utils/utilsdemos&#8217;));</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">addpath</span><span class="p">(</span><span class="n">strcat</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&#39;MATLAB&#39;</span><span class="p">),</span><span class="s">&#39;/toolbox/ted/ted&#39;</span><span class="p">));</span>
+<span class="n">addpath</span><span class="p">(</span><span class="n">strcat</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&#39;MATLAB&#39;</span><span class="p">),</span><span class="s">&#39;/toolbox/ted/teddemos&#39;</span><span class="p">));</span>
+<span class="n">addpath</span><span class="p">(</span><span class="n">strcat</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&#39;MATLAB&#39;</span><span class="p">),</span><span class="s">&#39;/toolbox/utils/utils&#39;</span><span class="p">));</span>
+<span class="n">addpath</span><span class="p">(</span><span class="n">strcat</span><span class="p">(</span><span class="n">getenv</span><span class="p">(</span><span class="s">&#39;MATLAB&#39;</span><span class="p">),</span><span class="s">&#39;/toolbox/utils/utilsdemos&#39;</span><span class="p">));</span>
+</pre></div>
+</div>
 <p>To rebuild the documentation, run:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">make</span>
 </pre></div>
