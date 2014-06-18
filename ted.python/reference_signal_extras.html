@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.0.0/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -24,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="TED 0.071 documentation" href="index.html" />
     <link rel="up" title="Reference" href="reference.html" />
@@ -49,7 +49,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">TED</a>
+        <a class="navbar-brand" href="index.html">
+          TED</a>
         <span class="navbar-text navbar-version pull-left"><b>0.071</b></span>
       </div>
 
@@ -59,11 +60,14 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Contents <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation Instructions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="install.html#obtaining-the-latest-software">Obtaining the Latest Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#prerequisites">Prerequisites</a></li>
@@ -91,10 +95,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors &amp; Acknowledgments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="authors.html#contact-information">Contact Information</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors &amp; Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changes.html">Change Log</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-071-under-development">Release 0.071 - (Under Development)</a></li>
@@ -117,18 +118,18 @@
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">Extra Signal Processing Routines</a><ul>
-<li><a class="reference internal" href="#error-analysis-routines">Error Analysis Routines</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#filtering-routines">Filtering Routines</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#miscellaneous-routines">Miscellaneous Routines</a><ul>
-</ul>
-</li>
+<li><a class="reference internal" href="#error-analysis-routines">Error Analysis Routines</a></li>
+<li><a class="reference internal" href="#filtering-routines">Filtering Routines</a></li>
+<li><a class="reference internal" href="#miscellaneous-routines">Miscellaneous Routines</a></li>
 </ul>
 </li>
 </ul>
@@ -179,13 +180,13 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.db.html#bionet.utils.signal_extras.db" title="bionet.utils.signal_extras.db"><tt class="xref py py-obj docutils literal"><span class="pre">db</span></tt></a></td>
-<td>Convert the specified power value to decibels assuming a</td>
+<td>Convert the specified power value to decibels assuming a reference value of 1.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.rms.html#bionet.utils.signal_extras.rms" title="bionet.utils.signal_extras.rms"><tt class="xref py py-obj docutils literal"><span class="pre">rms</span></tt></a></td>
 <td>Compute the root mean squared value of the specified array x.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.snr.html#bionet.utils.signal_extras.snr" title="bionet.utils.signal_extras.snr"><tt class="xref py py-obj docutils literal"><span class="pre">snr</span></tt></a></td>
-<td>Compute the signal-to-noise ratio (in dB) of a signal given its</td>
+<td>Compute the signal-to-noise ratio (in dB) of a signal given its reconstruction.</td>
 </tr>
 </tbody>
 </table>
@@ -202,10 +203,10 @@
 <td>Downsample a vector x by returning every nth entry.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.fftfilt.html#bionet.utils.signal_extras.fftfilt" title="bionet.utils.signal_extras.fftfilt"><tt class="xref py py-obj docutils literal"><span class="pre">fftfilt</span></tt></a></td>
-<td>Filter the signal x with the FIR filter described by the</td>
+<td>Filter the signal x with the FIR filter described by the coefficients in b using the overlap-add method.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.remezord.html#bionet.utils.signal_extras.remezord" title="bionet.utils.signal_extras.remezord"><tt class="xref py py-obj docutils literal"><span class="pre">remezord</span></tt></a></td>
-<td>Calculate the parameters required by the Remez exchange algorithm to</td>
+<td>Calculate the parameters required by the Remez exchange algorithm to construct a finite impulse response (FIR) filter that approximately meets the specified design.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/bionet.utils.signal_extras.upsample.html#bionet.utils.signal_extras.upsample" title="bionet.utils.signal_extras.upsample"><tt class="xref py py-obj docutils literal"><span class="pre">upsample</span></tt></a></td>
 <td>Upsample a vector x by inserting n-1 zeros between every entry.</td>
@@ -248,7 +249,7 @@
     </p>
     <p>
         &copy; Copyright 2009-2014, Lev Givon.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>

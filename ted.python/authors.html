@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.0.0/united/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.1.0/united/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -24,9 +24,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="TED 0.071 documentation" href="index.html" />
     <link rel="next" title="License" href="license.html" />
@@ -48,7 +48,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">TED</a>
+        <a class="navbar-brand" href="index.html">
+          TED</a>
         <span class="navbar-text navbar-version pull-left"><b>0.071</b></span>
       </div>
 
@@ -58,11 +59,14 @@
             
             
               <li class="dropdown globaltoc-container">
-  <a href="index.html"
-     class="dropdown-toggle"
-     data-toggle="dropdown">Contents <b class="caret"></b></a>
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Contents <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
-    ><ul class="current">
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation Instructions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="install.html#obtaining-the-latest-software">Obtaining the Latest Software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="install.html#prerequisites">Prerequisites</a></li>
@@ -90,10 +94,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="publications.html">Publications</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Authors &amp; Acknowledgments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#contact-information">Contact Information</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Authors &amp; Acknowledgments</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="changes.html">Change Log</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="changes.html#release-0-071-under-development">Release 0.071 - (Under Development)</a></li>
@@ -116,12 +117,15 @@
 </li>
               
                 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"><ul>
-<li><a class="reference internal" href="#">Authors &amp; Acknowledgments</a><ul>
-<li><a class="reference internal" href="#contact-information">Contact Information</a></li>
-</ul>
-</li>
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Authors &amp; Acknowledgments</a></li>
 </ul>
 </ul>
 </li>
@@ -164,8 +168,8 @@
 <p>This software was written and packaged by Lev Givon,
 currently at the Bionet Group <a class="footnote-reference" href="#id3" id="id1">[1]</a> at Columbia University.</p>
 <p>Some parts of the code are based (in part) on earlier implementations
-written by the following members and alumni of the Bionet Group under
-the supervision of Prof. Aurel A. Lazar <a class="footnote-reference" href="#id4" id="id2">[2]</a>:</p>
+written by the following alumni of the Bionet Group under the supervision
+of Prof. Aurel A. Lazar <a class="footnote-reference" href="#id4" id="id2">[2]</a>:</p>
 <ul class="simple">
 <li>Eftychios A. Pnevmatikakis</li>
 <li>Yevgeniy B. Slutskiy</li>
@@ -177,10 +181,6 @@ reviewing the code and providing useful suggestions:</p>
 <li>Robert J. Turetsky</li>
 <li>Yiyin Zhou</li>
 </ul>
-<div class="section" id="contact-information">
-<h2>Contact Information<a class="headerlink" href="#contact-information" title="Permalink to this headline">¶</a></h2>
-<p>Please direct all questions and comments pertaining to the software to</p>
-<p><a class="reference external" href="mailto:lev&#37;&#52;&#48;columbia&#46;edu">Lev Givon</a>.</p>
 <table class="docutils footnote" frame="void" id="id3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -193,7 +193,6 @@ reviewing the code and providing useful suggestions:</p>
 <tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://www.ee.columbia.edu/~aurel/">http://www.ee.columbia.edu/~aurel/</a></td></tr>
 </tbody>
 </table>
-</div>
 </div>
 
 
@@ -209,7 +208,7 @@ reviewing the code and providing useful suggestions:</p>
     </p>
     <p>
         &copy; Copyright 2009-2014, Lev Givon.<br/>
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.<br/>
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.<br/>
     </p>
   </div>
 </footer>
