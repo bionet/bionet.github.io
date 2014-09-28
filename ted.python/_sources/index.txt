@@ -1,6 +1,6 @@
 .. -*- rst -*- 
 
-Time Encoding and Decoding Toolbox
+Time Encoding and Decoding Toolkit
 ==================================
 
 Introduction
