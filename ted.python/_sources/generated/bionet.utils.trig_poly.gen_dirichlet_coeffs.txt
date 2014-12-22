@@ -1,6 +1,0 @@
-bionet.utils.trig_poly.gen_dirichlet_coeffs
-===========================================
-
-.. currentmodule:: bionet.utils.trig_poly
-
-.. autofunction:: gen_dirichlet_coeffs

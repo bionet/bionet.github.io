@@ -1,6 +1,0 @@
-bionet.utils.video_io.video_capture
-===================================
-
-.. currentmodule:: bionet.utils.video_io
-
-.. autofunction:: video_capture

@@ -1,6 +1,0 @@
-bionet.utils.signal_extras.nextpow2
-===================================
-
-.. currentmodule:: bionet.utils.signal_extras
-
-.. autofunction:: nextpow2
