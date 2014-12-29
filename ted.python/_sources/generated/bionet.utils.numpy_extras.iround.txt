@@ -1,6 +1,0 @@
-bionet.utils.numpy_extras.iround
-================================
-
-.. currentmodule:: bionet.utils.numpy_extras
-
-.. autofunction:: iround

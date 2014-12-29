@@ -1,6 +1,0 @@
-bionet.utils.animate.frame_compare
-==================================
-
-.. currentmodule:: bionet.utils.animate
-
-.. autofunction:: frame_compare

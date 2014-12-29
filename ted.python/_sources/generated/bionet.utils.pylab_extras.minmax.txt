@@ -1,6 +1,0 @@
-bionet.utils.pylab_extras.minmax
-================================
-
-.. currentmodule:: bionet.utils.pylab_extras
-
-.. autofunction:: minmax

@@ -1,6 +1,0 @@
-bionet.utils.trig_poly.gen_trig_poly
-====================================
-
-.. currentmodule:: bionet.utils.trig_poly
-
-.. autofunction:: gen_trig_poly

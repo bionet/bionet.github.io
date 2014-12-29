@@ -1,6 +1,0 @@
-bionet.utils.numpy_extras.mpower
-================================
-
-.. currentmodule:: bionet.utils.numpy_extras
-
-.. autofunction:: mpower

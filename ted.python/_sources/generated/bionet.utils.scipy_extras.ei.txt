@@ -1,6 +1,0 @@
-bionet.utils.scipy_extras.ei
-============================
-
-.. currentmodule:: bionet.utils.scipy_extras
-
-.. autofunction:: ei

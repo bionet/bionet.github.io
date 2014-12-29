@@ -1,6 +1,0 @@
-bionet.utils.signal_extras.downsample
-=====================================
-
-.. currentmodule:: bionet.utils.signal_extras
-
-.. autofunction:: downsample

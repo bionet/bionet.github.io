@@ -1,6 +1,0 @@
-bionet.utils.numpy_extras.crand
-===============================
-
-.. currentmodule:: bionet.utils.numpy_extras
-
-.. autofunction:: crand

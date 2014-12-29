@@ -1,6 +1,0 @@
-bionet.utils.signal_extras.fftfilt
-==================================
-
-.. currentmodule:: bionet.utils.signal_extras
-
-.. autofunction:: fftfilt

@@ -1,6 +1,0 @@
-bionet.ted.asdm.asdm_decode_ins
-===============================
-
-.. currentmodule:: bionet.ted.asdm
-
-.. autofunction:: asdm_decode_ins

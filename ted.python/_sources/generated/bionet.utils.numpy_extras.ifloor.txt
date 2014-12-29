@@ -1,6 +1,0 @@
-bionet.utils.numpy_extras.ifloor
-================================
-
-.. currentmodule:: bionet.utils.numpy_extras
-
-.. autofunction:: ifloor

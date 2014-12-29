@@ -1,6 +1,0 @@
-bionet.utils.plotting.contour
-=============================
-
-.. currentmodule:: bionet.utils.plotting
-
-.. autofunction:: contour

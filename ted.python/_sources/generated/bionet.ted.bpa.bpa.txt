@@ -1,6 +1,0 @@
-bionet.ted.bpa.bpa
-==================
-
-.. currentmodule:: bionet.ted.bpa
-
-.. autofunction:: bpa

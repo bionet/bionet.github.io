@@ -1,6 +1,0 @@
-bionet.ted.iaf.iaf_decode
-=========================
-
-.. currentmodule:: bionet.ted.iaf
-
-.. autofunction:: iaf_decode

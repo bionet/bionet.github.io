@@ -1,6 +1,0 @@
-bionet.utils.signal_extras.rms
-==============================
-
-.. currentmodule:: bionet.utils.signal_extras
-
-.. autofunction:: rms

@@ -1,6 +1,0 @@
-bionet.utils.plotting.contourf
-==============================
-
-.. currentmodule:: bionet.utils.plotting
-
-.. autofunction:: contourf

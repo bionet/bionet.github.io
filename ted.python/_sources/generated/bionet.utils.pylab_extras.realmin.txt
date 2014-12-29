@@ -1,6 +1,0 @@
-bionet.utils.pylab_extras.realmin
-=================================
-
-.. currentmodule:: bionet.utils.pylab_extras
-
-.. autofunction:: realmin

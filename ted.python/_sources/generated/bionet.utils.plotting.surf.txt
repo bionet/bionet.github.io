@@ -1,6 +1,0 @@
-bionet.utils.plotting.surf
-==========================
-
-.. currentmodule:: bionet.utils.plotting
-
-.. autofunction:: surf
